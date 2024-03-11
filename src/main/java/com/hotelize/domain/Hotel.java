@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document("tbl_hotel")
+@Document(collection = "tbl_hotel")
 public class Hotel implements Serializable {
     @Id
     private String id;
@@ -33,7 +33,7 @@ public class Hotel implements Serializable {
     private String checkInTime;
     private String checkOutTime;
     private String description;
-    private Tags tags;
+
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
@@ -43,14 +43,25 @@ public class Hotel implements Serializable {
         @Id
         private String id;
         private String url;
-
+        private String hotelId; // otel referansi
+        private ImageCategory imageCategory;
+        @CreatedDate
+        private LocalDateTime createdAt;
+        @LastModifiedDate
+        private LocalDateTime updatedAt;
         @Data
         @NoArgsConstructor
         @AllArgsConstructor
         @Builder
         @Document("tbl_image_category")
         public static class ImageCategory{
-
+            @Id
+            private String id;
+            private String name;
+            @CreatedDate
+            private LocalDateTime createdAt;
+            @LastModifiedDate
+            private LocalDateTime updatedAt;
         }
     }
 
