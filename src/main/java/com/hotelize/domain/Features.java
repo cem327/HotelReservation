@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
@@ -14,5 +15,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 @Builder
 @Document("tbl_otel_ozellik")
 public class Features {
+    @Id
+    private String id;
 
 }
