@@ -1,8 +1,9 @@
 package com.hotelize.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.hotelize.domain.Comment;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-import javax.xml.stream.events.Comment;
 
-public interface CommentRepository extends JpaRepository<Comment, Long> {
+
+public interface CommentRepository extends MongoRepository<Comment, String> {
 }
