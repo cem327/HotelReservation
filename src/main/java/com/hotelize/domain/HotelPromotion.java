@@ -1,16 +1,25 @@
 package com.hotelize.domain;
 
 
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.io.Serializable;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document("tbl_promotion") // tbl_otel_tanitim
-public class HotelPromotion {
+@Document(collection = "tbl_promotion") // tbl_otel_tanitim
+public class HotelPromotion implements Serializable {
+    @Id
+    private String id;
+
+    private String otelId; // otel id referansi
+    private String title; // baslik
+    private String description; // aciklama
 }
