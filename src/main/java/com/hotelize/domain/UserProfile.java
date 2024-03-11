@@ -1,6 +1,5 @@
 package com.hotelize.domain;
 
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,6 +10,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document
-public class User {
+@Document("tbl_user_profile")
+public class UserProfile {
 }

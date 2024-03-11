@@ -11,6 +11,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document
+@Document("tbl_tags") //tbl_tags
 public class Tags {
 }

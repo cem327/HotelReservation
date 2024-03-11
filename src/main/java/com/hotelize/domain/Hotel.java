@@ -34,11 +34,24 @@ public class Hotel implements Serializable {
     private String checkOutTime;
     private String description;
     private Tags tags;
-
-    public class Images{
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    @Document("tbl_image")
+    public static class Images{
         @Id
         private String id;
         private String url;
+
+        @Data
+        @NoArgsConstructor
+        @AllArgsConstructor
+        @Builder
+        @Document("tbl_image_category")
+        public static class ImageCategory{
+
+        }
     }
 
     @CreatedDate

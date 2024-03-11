@@ -11,6 +11,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document
+@Document("tbl_auth") //tbl_auth
 public class Auth {
 }

@@ -13,7 +13,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document("tbl_otel_ozellik")
+@Document("tbl_features")
 public class Features {
     @Id
     private String id;
