@@ -1,15 +1,15 @@
 package com.hotelize.controller;
 
-import com.hotelize.service.HotelService;
+import com.hotelize.service.HotelPromotionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import static com.hotelize.constants.RestApiUrls.*;
-import static com.hotelize.constants.RestApiUrls.HOTEL;
+import static com.hotelize.constants.RestApiUrls.HOTELPROMOTION;
 
 @RestController
-@RequestMapping(HOTEL)
+@RequestMapping(HOTELPROMOTION)
 @RequiredArgsConstructor
-public class HotelController {
-    private final HotelService hotelService;
+public class HotelPromotionController {
+    private final HotelPromotionService hotelPromotionService;
 }
