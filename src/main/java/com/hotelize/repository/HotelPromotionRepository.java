@@ -1,7 +1,7 @@
 package com.hotelize.repository;
 
 import com.hotelize.domain.HotelPromotion;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface HotelPromotionRepository extends JpaRepository<HotelPromotion, Long> {
+public interface HotelPromotionRepository extends MongoRepository<HotelPromotion, String> {
 }
