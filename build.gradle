@@ -15,7 +15,7 @@ allprojects {
 }
 
 subprojects {
-    group = 'com.muhammet'
+    group = 'com.hotelize'
     version = 'v.0.1'
     java {
         sourceCompatibility = JavaVersion.VERSION_21
@@ -50,6 +50,8 @@ allprojects {
         annotationProcessor     libs.mapstructProcessor
         implementation          libs.jwt
         implementation          libs.springBootStarterActuator
+        implementation          libs.springBootStarterDataMongoDB
+        implementation          libs.springBootStarterDataJpa
     }
 
     test{
