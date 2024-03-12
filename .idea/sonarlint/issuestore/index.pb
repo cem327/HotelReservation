@@ -666,3 +666,11 @@ r
 Bsrc/main/java/com/hotelize/dto/request/AuthRegisterRequestDto.java,d\8\d8b70ef4fe5b765920261378d5ad599cdbd9c70d
 t
 Dsrc/main/java/com/hotelize/dto/response/AuthRegisterResponseDto.java,1\9\1938f4ca87f123b111af7a8552e582d8700824d5
+k
+;src/main/java/com/hotelize/dto/request/LoginRequestDto.java,d\7\d7b1a0cc5bc3d2947d2e355e88ba2cff9af70496
+c
+3src/main/java/com/hotelize/utils/enums/EStatus.java,7\6\76bf709996e0d3844ebd1a0ee959269b2673a37a
+a
+1src/main/java/com/hotelize/utils/enums/ERole.java,7\a\7aad841bb582a46a03bf41337961c9e077586b5f
+e
+5src/main/java/com/hotelize/utils/JwtTokenManager.java,e\6\e69ba396066ebdaab841df2f02be3c4f6bd7c218

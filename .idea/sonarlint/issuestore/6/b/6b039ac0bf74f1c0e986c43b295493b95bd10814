@@ -1,5 +1,7 @@
 
 i	java:S101
 "MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(éÁ»Ç8ÏƒÆŠã1
+z
+java:S1128"XRemove this unused import 'org.springframework.data.mongodb.repository.MongoRepository'.(þ§õæýÿÿÿÿ8‡ã‘’ã1
 T
 java:S1068"7Remove this unused "hotelTourRepository" private field.(ßÂÓû8ÖƒÆŠã1
