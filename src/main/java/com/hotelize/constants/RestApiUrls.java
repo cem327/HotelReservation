@@ -39,6 +39,7 @@ public class RestApiUrls {
     public static final String REGISTER = "/register";
     public static final String LOGIN = "/login";
     public static final String FIND_BY_ID = "/find-by-id";
+    public static final String FIND_POPULAR = "/find-popular";
 
 
 

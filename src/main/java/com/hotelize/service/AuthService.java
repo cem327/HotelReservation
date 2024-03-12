@@ -19,9 +19,10 @@ import java.util.Optional;
 public class AuthService extends ServiceManager<Auth, String> {
     private final AuthRepository authRepository;
     private final JwtTokenManager jwtTokenManager;
+    ErrorType authErrorType;
 
 
-    public AuthService(AuthRepository authRepository, UserProfileService userProfileService, JwtTokenManager jwtTokenManager, ErrorType authErrorType) {
+    public AuthService(AuthRepository authRepository, UserProfileService userProfileService, JwtTokenManager jwtTokenManager) {
         super(authRepository);
 
         this.authRepository = authRepository;
