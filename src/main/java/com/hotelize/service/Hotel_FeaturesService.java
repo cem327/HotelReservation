@@ -3,7 +3,6 @@ package com.hotelize.service;
 import com.hotelize.domain.Hotel_Features;
 import com.hotelize.repository.Hotel_FeaturesRepository;
 import com.hotelize.utils.ServiceManager;
-import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Service;
 
 @Service

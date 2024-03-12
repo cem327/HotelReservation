@@ -3,7 +3,6 @@ package com.hotelize.service;
 import com.hotelize.domain.Auth;
 import com.hotelize.repository.AuthRepository;
 import com.hotelize.utils.ServiceManager;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 @Service
