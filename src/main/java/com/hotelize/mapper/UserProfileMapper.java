@@ -3,6 +3,7 @@ package com.hotelize.mapper;
 import com.hotelize.dto.request.CreateUserRequestDto;
 import com.hotelize.domain.UserProfile;
 import com.hotelize.dto.request.CreateUserRequestDto;
+import com.hotelize.dto.request.UserProfileUpdateRequestDto;
 import com.hotelize.dto.response.CreateUserResponseDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -17,7 +18,7 @@ public interface UserProfileMapper {
     UserProfile fromCreateRequestToUserProfile(final CreateUserRequestDto dto);
     CreateUserResponseDto fromUserProfileToCreateResponseDto(final UserProfile userProfile);
 
-
+    UserProfile fromUserProfileUpdateRequestDtoToUserProfile(final UserProfileUpdateRequestDto dto);
 
 
 }

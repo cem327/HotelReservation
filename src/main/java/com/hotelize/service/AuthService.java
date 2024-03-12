@@ -53,7 +53,7 @@ public class AuthService extends ServiceManager<Auth, String> {
         }
         if(authOptional.get().getStatus().equals(EStatus.ACTIVE)){
             return jwtTokenManager.createToken(authOptional.get().getId(),authOptional.get().getRole())
-                    .orElseThrow(() -> {throw new AuthManagerException(ErrorType.TOKEN_NOT_CREATED);});
+                    .orElseThrow(() -> { throw new AuthManagerException(ErrorType.TOKEN_NOT_CREATED);});
         } else {
             throw new AuthManagerException(ErrorType.ACCOUNT_NOT_ACTIVE);
         }

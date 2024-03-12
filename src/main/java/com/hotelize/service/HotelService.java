@@ -1,6 +1,7 @@
 package com.hotelize.service;
 
 import com.hotelize.domain.Hotel;
+import com.hotelize.domain.Hotel_Features;
 import com.hotelize.dto.request.HotelAddRequestDto;
 import com.hotelize.dto.response.HotelAddResponseDto;
 import com.hotelize.repository.HotelRepository;
@@ -13,6 +14,7 @@ import java.util.List;
 public class HotelService extends ServiceManager<Hotel,String> {
 
     private final HotelRepository hotelRepository;
+
 
     public HotelService(HotelRepository hotelRepository) {
         super(hotelRepository);

@@ -1,16 +1,15 @@
 package com.hotelize.controller;
 
+import com.hotelize.domain.Hotel;
 import com.hotelize.domain.UserProfile;
 import com.hotelize.dto.request.CreateUserRequestDto;
+import com.hotelize.dto.request.UserProfileUpdateRequestDto;
 import com.hotelize.dto.response.CreateUserResponseDto;
 import com.hotelize.service.UserProfileService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -36,7 +35,22 @@ public class UserProfileController {
     }
 
     @PostMapping(FIND_BY_ID)
-    public ResponseEntity<UserProfile> findById(String id){
+    public ResponseEntity<UserProfile> findById(@RequestParam String id){
         return ResponseEntity.ok(userProfileService.findUserById(id));
+    }
+
+    @PostMapping(FIND_BY_TOKEN)
+    public ResponseEntity<UserProfile> findByToken(@RequestParam String token){
+        return ResponseEntity.ok(userProfileService.findUserByToken(token));
+    }
+
+    @PostMapping(UPDATE)
+    public ResponseEntity<UserProfile> update(@RequestBody UserProfileUpdateRequestDto dto){
+        return ResponseEntity.ok(userProfileService.update(dto));
+    }
+
+    @GetMapping(FAVOURITE)
+    public ResponseEntity<List<Hotel>> getFavourite(){
+        return ResponseEntity.ok(userProfileService.getFavourite());
     }
 }

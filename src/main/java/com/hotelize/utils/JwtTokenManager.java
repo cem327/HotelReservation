@@ -24,7 +24,7 @@ public class JwtTokenManager {
     private String audience;
 
 
-    public Optional<String> createToken(Long id){
+    public Optional<String> createToken(String id){
         String token = null;
         Date date = new Date(System.currentTimeMillis()+(1000*60*5));
         try {
@@ -80,7 +80,7 @@ public class JwtTokenManager {
         return true;
     }
 
-    public Optional<Long> getIdFromToken(String token){
+    public Optional<String> getIdFromToken(String token){
         try {
             Algorithm algorithm = Algorithm.HMAC512(secretKey);
             JWTVerifier verifier = JWT.require(algorithm).withIssuer(issuer).withAudience(audience).build();
@@ -89,7 +89,7 @@ public class JwtTokenManager {
             if(decodedJWT == null){
                 throw new AuthManagerException(ErrorType.INVALID_TOKEN);
             }
-            Long id = decodedJWT.getClaim("id").asLong();
+            String id = decodedJWT.getClaim("id").asString();
             return Optional.of(id);
 
         } catch (Exception e) {
