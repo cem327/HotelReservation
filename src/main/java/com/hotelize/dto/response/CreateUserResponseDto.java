@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 public class CreateUserResponseDto {
     private String username;
     private String email;
-    private String password;
+//    private String password;
 }

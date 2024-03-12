@@ -658,3 +658,5 @@ r
 Bsrc/main/java/com/hotelize/dto/response/CreateUserResponseDto.java,0\c\0c652d22715eeddf1004d79c4b2e1839b40e8987
 h
 8src/main/java/com/hotelize/mapper/UserProfileMapper.java,2\f\2fbaf51264e7060596011d7020c6c3e2197c6999
+^
+.src/main/java/com/hotelize/utils/IService.java,0\2\02028c5509a6321a1852528fc4a0d9f75b676afd
