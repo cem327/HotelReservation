@@ -51,7 +51,7 @@ allprojects {
         implementation          libs.jwt
         implementation          libs.springBootStarterActuator
         implementation          libs.springBootStarterDataMongoDB
-        implementation          libs.springBootStarterDataJpa
+
     }
 
     test{

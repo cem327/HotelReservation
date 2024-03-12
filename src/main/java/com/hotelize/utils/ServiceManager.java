@@ -1,26 +1,12 @@
 package com.hotelize.utils;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 import java.util.Optional;
 
-/**
- *
- * @param <T>  -> Bu sınıfı miras almak isteyen bir servis hangi entity e
- *           hizmet ediyor ise onu Type olarak verecek.
- * @param <ID> -> Bu sınıfı miras alan servisin kullanmakta olduğu id tipini
- *            belirlemesi gerekir, Long,String,Integer...
- */
 
 public class ServiceManager<T, ID> implements IService<T,ID>{
-    /**
-     * Tüm Servisler için ortak bir kullanım sunacak ise, burada repository
-     * üzerinden işlem yapabiliyor olmalı.
-     * @param t
-     * @return
-     */
 
     private final MongoRepository<T,ID> repository;
     public ServiceManager(MongoRepository<T,ID> repository){
