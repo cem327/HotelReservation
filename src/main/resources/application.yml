@@ -10,3 +10,7 @@ spring:
       password: ${PASSWORD}
       database: hotelizeDB
 
+jwt:
+  secretKey: ${secretKey}
+  audience: ${audience}
+  issuer:   ${issuer}

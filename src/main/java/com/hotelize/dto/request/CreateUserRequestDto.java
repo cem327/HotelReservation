@@ -15,7 +15,7 @@ public class CreateUserRequestDto {
 
     private String authId; // auth id referansi
     @NotNull
-    private String name;
+    private String userName;
     @NotNull
     private String surname;
     @Nullable

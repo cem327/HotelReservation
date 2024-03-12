@@ -11,7 +11,7 @@ import java.util.Optional;
 public interface AuthRepository extends MongoRepository<Auth, String> {
 
 
-    Optional<Auth> findOptionalByUsernameAndPassword(String username, String password);
+    Optional<Auth> findOptionalByUserNameAndPassword(String userName, String password);
     List<Auth> findAllByRole(ERole eRole);
 
 }

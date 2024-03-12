@@ -46,7 +46,7 @@ public class AuthService extends ServiceManager<Auth, String> {
 
 
     public String login(LoginRequestDto dto) {
-        Optional<Auth> authOptional = authRepository.findOptionalByUsernameAndPassword(dto.getUserName(),dto.getPassword());
+        Optional<Auth> authOptional = authRepository.findOptionalByUserNameAndPassword(dto.getUserName(),dto.getPassword());
         if(authOptional.isEmpty()){
             throw new AuthManagerException(ErrorType.LOGIN_ERROR);
         }
