@@ -649,3 +649,6 @@ Q.idea/sonarlint/securityhotspotstore/3/8/38e8656d18d89f49f9ebf054cd1391daa9a4fe
 Q.idea/sonarlint/securityhotspotstore/6/9/69a9cb8552b5b6a2e63857287446641ae0e54a72,c\0\c02bf7beced36a5042878bc709b459a658ea3e97
 d
 4src/main/java/com/hotelize/service/HotelService.java,8\2\82a961966120f3f55c672148cfe2363867d33569
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
