@@ -13,20 +13,26 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserProfileService extends ServiceManager<UserProfile, String> {
 
     private final UserProfileRepository userProfileRepository;
+    private final AuthService authService;
 
-    public UserProfileService(UserProfileRepository userProfileRepository) {
+    public UserProfileService(UserProfileRepository userProfileRepository,AuthService authService) {
         super(userProfileRepository);
         this.userProfileRepository = userProfileRepository;
+        this.authService = authService;
     }
 
 
-    @Transactional
+
     public CreateUserResponseDto createUserProfile(CreateUserRequestDto dto){
+
+        authService.findById(dto.getAuthId()).orElseThrow()
+
 
         UserProfile userProfile = UserProfileMapper.INSTANCE.fromCreateRequestToUserProfile(dto);
         save(userProfile);
 
         return UserProfileMapper.INSTANCE.fromUserProfileToCreateResponseDto(userProfile);
-
     }
+
+
 }

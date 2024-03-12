@@ -17,20 +17,7 @@ public interface UserProfileMapper {
     UserProfile fromCreateRequestToUserProfile(final CreateUserRequestDto dto);
     CreateUserResponseDto fromUserProfileToCreateResponseDto(final UserProfile userProfile);
 
-//    @Mapping(source = "id" , target = "authId")
-    UserProfile fromAuthToCreateUserRequestDto(final CreateUserRequestDto dto);
 
 
 
-//    @Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
-//    public interface UserMapper {
-//
-//        UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
-//
-//        User fromCreateRequestToUser(final CreateUserRequestDto dto);
-//
-//
-//
-//
-//    }
 }
