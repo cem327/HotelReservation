@@ -660,3 +660,9 @@ h
 8src/main/java/com/hotelize/mapper/UserProfileMapper.java,2\f\2fbaf51264e7060596011d7020c6c3e2197c6999
 ^
 .src/main/java/com/hotelize/utils/IService.java,0\2\02028c5509a6321a1852528fc4a0d9f75b676afd
+k
+;src/main/java/com/hotelize/HotelReservationApplication.java,a\b\ab31c0497369a67bae35e7af05c88b0ce8544b69
+r
+Bsrc/main/java/com/hotelize/dto/request/AuthRegisterRequestDto.java,d\8\d8b70ef4fe5b765920261378d5ad599cdbd9c70d
+t
+Dsrc/main/java/com/hotelize/dto/response/AuthRegisterResponseDto.java,1\9\1938f4ca87f123b111af7a8552e582d8700824d5
