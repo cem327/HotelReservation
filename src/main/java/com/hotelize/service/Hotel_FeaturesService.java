@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 public class Hotel_FeaturesService extends ServiceManager<Hotel_Features, String> {
 
     private final Hotel_FeaturesRepository hotelFeaturesRepository;
+
     public Hotel_FeaturesService(Hotel_FeaturesRepository hotelFeaturesRepository) {
         super(hotelFeaturesRepository);
         this.hotelFeaturesRepository = hotelFeaturesRepository;
