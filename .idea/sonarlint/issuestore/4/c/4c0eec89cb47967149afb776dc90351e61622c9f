@@ -1,4 +1,5 @@
 
-i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(şÓÈÔ8áªíâ1
-_
-java:S2094"BRemove this empty class, write its code or make it an "interface".(şÓÈÔ8ãªíâ1
+i	java:S101
+"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ôç¦Â8şÊßŠã1
+Y
+java:S1068"7Remove this unused "hotelTagsRepository" private field.(˜Äåıøÿÿÿÿ8ƒËßŠã1
