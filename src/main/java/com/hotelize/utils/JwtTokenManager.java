@@ -4,9 +4,8 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.hotelize.exception.auth_exception.AuthErrorType;
+import com.hotelize.exception.auth_exception.ErrorType;
 import com.hotelize.exception.auth_exception.AuthManagerException;
-import com.hotelize.exception.ErrorType;
 import com.hotelize.utils.enums.ERole;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -44,7 +43,7 @@ public class JwtTokenManager {
         }
     }
 
-    public Optional<String> createToken(Long id, ERole role){
+    public Optional<String> createToken(String id, ERole role){
         String token = null;
         Date date = new Date(System.currentTimeMillis()+(1000*60*5));
         try {
@@ -76,7 +75,7 @@ public class JwtTokenManager {
 
         } catch (Exception e){
             System.out.println(e.getMessage());
-            throw new AuthManagerException(AuthErrorType.INVALID_TOKEN);
+            throw new AuthManagerException(ErrorType.INVALID_TOKEN);
         }
         return true;
     }
@@ -88,14 +87,14 @@ public class JwtTokenManager {
             DecodedJWT decodedJWT = verifier.verify(token);
 
             if(decodedJWT == null){
-                throw new AuthManagerException(AuthErrorType.INVALID_TOKEN);
+                throw new AuthManagerException(ErrorType.INVALID_TOKEN);
             }
             Long id = decodedJWT.getClaim("id").asLong();
             return Optional.of(id);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            throw new AuthManagerException(AuthErrorType.INVALID_TOKEN);
+            throw new AuthManagerException(ErrorType.INVALID_TOKEN);
         }
     }
 
@@ -106,13 +105,13 @@ public class JwtTokenManager {
             DecodedJWT decodedJWT = verifier.verify(token);
 
             if(decodedJWT == null){
-                throw new AuthManagerException(AuthErrorType.INVALID_TOKEN);
+                throw new AuthManagerException(ErrorType.INVALID_TOKEN);
             }
             String role = decodedJWT.getClaim("role").asString();
             return Optional.of(role);
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            throw new AuthManagerException(AuthErrorType.INVALID_TOKEN);
+            throw new AuthManagerException(ErrorType.INVALID_TOKEN);
         }
     }
 

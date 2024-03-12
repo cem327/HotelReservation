@@ -1,9 +1,6 @@
-package com.hotelize.exception.auth_exception;
+package com.hotelize.exception.user_profile_service_exception;
 
 
-import com.hotelize.exception.ErrorMessage;
-import com.hotelize.exception.ErrorType;
-import com.hotelize.exception.UserProfileException;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.hotelize.exception.ErrorType.BAD_REQUEST_ERROR;
 
 @ControllerAdvice
 public class AuthGlobalExceptionHandler {
@@ -24,14 +20,14 @@ public class AuthGlobalExceptionHandler {
     public ResponseEntity<ErrorMessage> globalHandler(RuntimeException runtimeException) {
 
         return new ResponseEntity<>(createErrorMessage(runtimeException, ErrorType.INTERNAL_ERROR)
-        , HttpStatus.INTERNAL_SERVER_ERROR);
+                , HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(UserProfileException.class)
+    @ExceptionHandler(UserProfileServiceException.class)
     @ResponseBody
-    public ResponseEntity<ErrorMessage> authServiceHandler(UserProfileException UserProfileException){
-        return new ResponseEntity<>(createErrorMessage(UserProfileException, UserProfileException.getErrorType()),
-                UserProfileException.getErrorType().getHttpStatus());
+    public ResponseEntity<ErrorMessage> authServiceHandler(UserProfileServiceException UserProfileServiceException){
+        return new ResponseEntity<>(createErrorMessage(UserProfileServiceException, UserProfileServiceException.getErrorType()),
+                UserProfileServiceException.getErrorType().getHttpStatus());
     }
 
     @ExceptionHandler(ConstraintViolationException.class)
@@ -48,15 +44,14 @@ public class AuthGlobalExceptionHandler {
     public final ResponseEntity<ErrorMessage> handleMethodArgumentNotValidException(
             MethodArgumentNotValidException exception) {
 
-        ErrorType errorType = BAD_REQUEST_ERROR;
         List<String> fields = new ArrayList<>();
         exception
                 .getBindingResult()
                 .getFieldErrors()
                 .forEach(e -> fields.add(e.getField() + ": " + e.getDefaultMessage()));
-        ErrorMessage errorMessage = createErrorMessage(exception,errorType);
+        ErrorMessage errorMessage = createErrorMessage(exception, ErrorType.BAD_REQUEST_ERROR);
         errorMessage.setFields(fields);
-        return new ResponseEntity<>(errorMessage, errorType.getHttpStatus());
+        return new ResponseEntity<>(errorMessage, ErrorType.BAD_REQUEST_ERROR.getHttpStatus());
     }
 
 

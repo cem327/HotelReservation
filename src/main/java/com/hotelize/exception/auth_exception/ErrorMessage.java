@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class AuthErrorMessage {
+public class ErrorMessage {
     int code;
     String message;
     List<String> fields;

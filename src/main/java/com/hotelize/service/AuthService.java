@@ -4,7 +4,7 @@ import com.hotelize.domain.Auth;
 import com.hotelize.dto.request.AuthRegisterRequestDto;
 import com.hotelize.dto.request.LoginRequestDto;
 import com.hotelize.dto.response.AuthRegisterResponseDto;
-import com.hotelize.exception.auth_exception.AuthErrorType;
+import com.hotelize.exception.auth_exception.ErrorType;
 import com.hotelize.exception.auth_exception.AuthManagerException;
 import com.hotelize.repository.AuthRepository;
 import com.hotelize.utils.JwtTokenManager;
@@ -21,7 +21,7 @@ public class AuthService extends ServiceManager<Auth, String> {
     private final JwtTokenManager jwtTokenManager;
 
 
-    public AuthService(AuthRepository authRepository, UserProfileService userProfileService, JwtTokenManager jwtTokenManager, AuthErrorType authErrorType) {
+    public AuthService(AuthRepository authRepository, UserProfileService userProfileService, JwtTokenManager jwtTokenManager, ErrorType authErrorType) {
         super(authRepository);
 
         this.authRepository = authRepository;
@@ -48,13 +48,13 @@ public class AuthService extends ServiceManager<Auth, String> {
     public String login(LoginRequestDto dto) {
         Optional<Auth> authOptional = authRepository.findOptionalByUsernameAndPassword(dto.getUserName(),dto.getPassword());
         if(authOptional.isEmpty()){
-            throw new AuthManagerException(AuthErrorType.LOGIN_ERROR);
+            throw new AuthManagerException(ErrorType.LOGIN_ERROR);
         }
         if(authOptional.get().getStatus().equals(EStatus.ACTIVE)){
             return jwtTokenManager.createToken(authOptional.get().getId(),authOptional.get().getRole())
-                    .orElseThrow(() -> {throw new AuthManagerException(AuthErrorType.TOKEN_NOT_CREATED);});
+                    .orElseThrow(() -> {throw new AuthManagerException(ErrorType.TOKEN_NOT_CREATED);});
         } else {
-            throw new AuthManagerException(AuthErrorType.ACCOUNT_NOT_ACTIVE);
+            throw new AuthManagerException(ErrorType.ACCOUNT_NOT_ACTIVE);
         }
     }
 

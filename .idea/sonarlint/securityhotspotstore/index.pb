@@ -704,3 +704,15 @@ n
 >src/main/java/com/hotelize/exception/UserProfileException.java,9\e\9e6ec299ffe21d97e7014aa573bba0de7316e868
 p
 @src/main/java/com/hotelize/exception/GlobalExceptionHandler.java,8\4\8490b10581f9a402e90e88b289d512e5b8c2402f
+‡
+Wsrc/main/java/com/hotelize/exception/hotel_service_exception/HotelServiceException.java,3\a\3ae0d6f5d50d82edb04a1114d04c0c34465fa337
+r
+Bsrc/main/java/com/hotelize/exception/auth_exception/ErrorType.java,f\b\fb32a2ba90afe660dfe2a85a1d8583ca46fcea7f
+š
+jsrc/main/java/com/hotelize/exception/user_profile_service_exception/UserProfileGlobalExceptionHandler.java,8\5\852b9f09d9ae765668c72e5e4f1347d3245c9e17
+u
+Esrc/main/java/com/hotelize/exception/auth_exception/ErrorMessage.java,2\0\2027ceb8ea768590868fc0016f1296afd412b4c3
+`
+0src/main/java/com/hotelize/utils/SampleData.java,2\3\23ee2c71e8e0d66d84ffed2caa777f415a658701
+d
+4src/main/java/com/hotelize/utils/ServiceManager.java,5\4\54e6fac297574495ea7fbd2222fc5cc59491c64e

@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatus;
 
 @Getter
 @AllArgsConstructor
-public enum AuthErrorType {
+public enum ErrorType {
 
     INTERNAL_SERVER_ERROR(5100, "Sunucu Hatasi",HttpStatus.INTERNAL_SERVER_ERROR),
     BAD_REQUEST (4100,"Parametre hatasi", HttpStatus.BAD_REQUEST),
