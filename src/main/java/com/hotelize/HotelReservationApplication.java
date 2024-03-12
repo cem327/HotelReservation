@@ -6,8 +6,8 @@ import org.springframework.data.mongodb.config.EnableMongoAuditing;
 
 @SpringBootApplication
 @EnableMongoAuditing
-public class Main {
+public class HotelReservationApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(HotelReservationApplication.class, args);
     }
 }
