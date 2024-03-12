@@ -21,7 +21,7 @@ public class AuthService extends ServiceManager<Auth, String> {
     private final JwtTokenManager jwtTokenManager;
 
 
-    public AuthService(AuthRepository authRepository, UserProfileService userProfileService, JwtTokenManager jwtTokenManager, ErrorType authErrorType) {
+    public AuthService(AuthRepository authRepository, UserProfileService userProfileService, JwtTokenManager jwtTokenManager) {
         super(authRepository);
 
         this.authRepository = authRepository;
