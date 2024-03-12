@@ -4,8 +4,9 @@ server:
 spring:
   data:
     mongodb:
-      host: localhost
-      port: 27020
-      username: java13user
-      password: root
-      database: hoteldb
+      host: ${IP_ADDRESS}
+      port: 27017
+      username: ${USERNAME}
+      password: ${PASSWORD}
+      database: hotelizeDB
+
