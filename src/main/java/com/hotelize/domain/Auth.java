@@ -1,6 +1,8 @@
 package com.hotelize.domain;
 
 
+import com.hotelize.utils.enums.ERole;
+import com.hotelize.utils.enums.EStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -31,4 +33,11 @@ public class Auth implements Serializable {
     private LocalDateTime createdAt;
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
+
+    @Builder.Default
+    private ERole role = ERole.USER;
+
+    @Builder.Default
+    private EStatus status = EStatus.PENDING;
 }

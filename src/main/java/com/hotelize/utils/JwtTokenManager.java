@@ -4,7 +4,8 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.hotelize.exception.AuthManagerException;
+import com.hotelize.exception.auth_exception.AuthErrorType;
+import com.hotelize.exception.auth_exception.AuthManagerException;
 import com.hotelize.exception.ErrorType;
 import com.hotelize.utils.enums.ERole;
 import org.springframework.beans.factory.annotation.Value;
@@ -75,7 +76,7 @@ public class JwtTokenManager {
 
         } catch (Exception e){
             System.out.println(e.getMessage());
-            throw new AuthManagerException(ErrorType.INVALID_TOKEN);
+            throw new AuthManagerException(AuthErrorType.INVALID_TOKEN);
         }
         return true;
     }
@@ -87,14 +88,14 @@ public class JwtTokenManager {
             DecodedJWT decodedJWT = verifier.verify(token);
 
             if(decodedJWT == null){
-                throw new AuthManagerException(ErrorType.INVALID_TOKEN);
+                throw new AuthManagerException(AuthErrorType.INVALID_TOKEN);
             }
             Long id = decodedJWT.getClaim("id").asLong();
             return Optional.of(id);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            throw new AuthManagerException(ErrorType.INVALID_TOKEN);
+            throw new AuthManagerException(AuthErrorType.INVALID_TOKEN);
         }
     }
 
@@ -105,13 +106,13 @@ public class JwtTokenManager {
             DecodedJWT decodedJWT = verifier.verify(token);
 
             if(decodedJWT == null){
-                throw new AuthManagerException(ErrorType.INVALID_TOKEN);
+                throw new AuthManagerException(AuthErrorType.INVALID_TOKEN);
             }
             String role = decodedJWT.getClaim("role").asString();
             return Optional.of(role);
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            throw new AuthManagerException(ErrorType.INVALID_TOKEN);
+            throw new AuthManagerException(AuthErrorType.INVALID_TOKEN);
         }
     }
 
