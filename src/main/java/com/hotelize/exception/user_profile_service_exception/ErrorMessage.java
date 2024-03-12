@@ -1,4 +1,4 @@
-package com.hotelize.exception;
+package com.hotelize.exception.user_profile_service_exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

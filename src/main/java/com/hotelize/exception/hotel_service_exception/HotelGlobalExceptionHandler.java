@@ -1,5 +1,4 @@
-package com.hotelize.exception;
-
+package com.hotelize.exception.hotel_service_exception;
 
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
@@ -12,10 +11,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.hotelize.exception.ErrorType.BAD_REQUEST_ERROR;
+
 
 @ControllerAdvice
-public class GlobalExceptionHandler {
+public class HotelGlobalExceptionHandler {
 
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ErrorMessage> globalHandler(RuntimeException runtimeException) {
@@ -24,17 +23,17 @@ public class GlobalExceptionHandler {
         , HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(UserProfileException.class)
+    @ExceptionHandler(HotelServiceException.class)
     @ResponseBody
-    public ResponseEntity<ErrorMessage> authServiceHandler(UserProfileException UserProfileException){
-        return new ResponseEntity<>(createErrorMessage(UserProfileException, UserProfileException.getErrorType()),
-                UserProfileException.getErrorType().getHttpStatus());
+    public ResponseEntity<ErrorMessage> authServiceHandler(HotelServiceException HotelServiceException){
+        return new ResponseEntity<>(createErrorMessage(HotelServiceException, HotelServiceException.getErrorType()),
+                HotelServiceException.getErrorType().getHttpStatus());
     }
 
     @ExceptionHandler(ConstraintViolationException.class)
     @ResponseBody
     public ResponseEntity<ErrorMessage> duclicateKeyHandler(ConstraintViolationException duplicateKeyException){
-        return new ResponseEntity<>(createErrorMessage(duplicateKeyException,ErrorType.INTERNAL_ERROR)
+        return new ResponseEntity<>(createErrorMessage(duplicateKeyException, ErrorType.INTERNAL_ERROR)
                 , HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
@@ -45,19 +44,18 @@ public class GlobalExceptionHandler {
     public final ResponseEntity<ErrorMessage> handleMethodArgumentNotValidException(
             MethodArgumentNotValidException exception) {
 
-        ErrorType errorType = BAD_REQUEST_ERROR;
         List<String> fields = new ArrayList<>();
         exception
                 .getBindingResult()
                 .getFieldErrors()
                 .forEach(e -> fields.add(e.getField() + ": " + e.getDefaultMessage()));
-        ErrorMessage errorMessage = createErrorMessage(exception,errorType);
+        ErrorMessage errorMessage = createErrorMessage(exception,ErrorType.BAD_REQUEST_ERROR);
         errorMessage.setFields(fields);
-        return new ResponseEntity<>(errorMessage, errorType.getHttpStatus());
+        return new ResponseEntity<>(errorMessage, ErrorType.BAD_REQUEST_ERROR.getHttpStatus());
     }
 
 
-    private ErrorMessage createErrorMessage(Exception exception,ErrorType errorType){
+    private ErrorMessage createErrorMessage(Exception exception, ErrorType errorType){
         System.out.println("Tüm hataların geçtiği nokta...: "+ exception.getMessage());
         return ErrorMessage.builder()
                 .message(errorType.getMessage())

@@ -35,4 +35,8 @@ public class UserProfileController {
         return ResponseEntity.ok(userProfileService.findAll());
     }
 
+    @PostMapping(FIND_BY_ID)
+    public ResponseEntity<UserProfile> findById(String id){
+        return ResponseEntity.ok(userProfileService.findUserById(id));
+    }
 }
