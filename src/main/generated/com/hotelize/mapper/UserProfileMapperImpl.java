@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-03-12T12:30:37+0300",
+    date = "2024-03-12T13:54:18+0300",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21 (Oracle Corporation)"
 )
 @Component
@@ -22,6 +22,11 @@ public class UserProfileMapperImpl implements UserProfileMapper {
 
         UserProfile.UserProfileBuilder userProfile = UserProfile.builder();
 
+        userProfile.authId( dto.getAuthId() );
+        userProfile.name( dto.getName() );
+        userProfile.surname( dto.getSurname() );
+        userProfile.address( dto.getAddress() );
+
         return userProfile.build();
     }
 
@@ -33,17 +38,9 @@ public class UserProfileMapperImpl implements UserProfileMapper {
 
         CreateUserResponseDto.CreateUserResponseDtoBuilder createUserResponseDto = CreateUserResponseDto.builder();
 
+        createUserResponseDto.name( userProfile.getName() );
+        createUserResponseDto.surname( userProfile.getSurname() );
+
         return createUserResponseDto.build();
-    }
-
-    @Override
-    public UserProfile fromAuthToCreateUserRequestDto(CreateUserRequestDto dto) {
-        if ( dto == null ) {
-            return null;
-        }
-
-        UserProfile.UserProfileBuilder userProfile = UserProfile.builder();
-
-        return userProfile.build();
     }
 }

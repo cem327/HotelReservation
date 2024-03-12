@@ -1,5 +1,7 @@
 package com.hotelize.dto.request;
 
+import jakarta.annotation.Nullable;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,9 +13,12 @@ import lombok.NoArgsConstructor;
 @Builder
 public class CreateUserRequestDto {
 
-    private Long userId;
-    private String username;
-    private String email;
-    private String password;
+    private String authId; // auth id referansi
+    @NotNull
+    private String name;
+    @NotNull
+    private String surname;
+    @Nullable
+    private String address;
 
 }

@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
 import static com.hotelize.constants.RestApiUrls.USERPROFILE;
 import static com.hotelize.constants.RestApiUrls.*;
 
@@ -25,6 +28,11 @@ public class UserProfileController {
     public ResponseEntity<CreateUserResponseDto> createUserProfile(@RequestBody @Valid CreateUserRequestDto dto){
         return ResponseEntity.ok(userProfileService.createUserProfile(dto));
 
+    }
+
+    @PostMapping(FIND_ALL)
+    public ResponseEntity<List<UserProfile>> findAll(){
+        return ResponseEntity.ok(userProfileService.findAll());
     }
 
 }
