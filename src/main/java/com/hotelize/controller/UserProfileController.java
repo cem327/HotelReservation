@@ -22,8 +22,8 @@ public class UserProfileController {
     private final UserProfileService userProfileService;
 
     @PostMapping(CREATE)
-    public ResponseEntity<CreateUserResponseDto> createUser(@RequestBody @Valid CreateUserRequestDto dto){
-        return ResponseEntity.ok(userProfileService.createUser(dto));
+    public ResponseEntity<CreateUserResponseDto> createUserProfile(@RequestBody @Valid CreateUserRequestDto dto){
+        return ResponseEntity.ok(userProfileService.createUserProfile(dto));
 
     }
 
