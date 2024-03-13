@@ -678,3 +678,5 @@ d
 4src/main/java/com/hotelize/utils/ServiceManager.java,5\4\54e6fac297574495ea7fbd2222fc5cc59491c64e
 c
 3src/main/java/com/hotelize/manager/UserManager.java,7\5\757a73c7659ce4cc9f63cbae1f140ac42307118c
+w
+Gsrc/main/java/com/hotelize/dto/request/UpdateUserProfileRequestDto.java,4\6\467f05ece47746981480ec9c1d56be773c7d024f

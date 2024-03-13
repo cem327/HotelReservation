@@ -43,4 +43,6 @@ public class UserProfileController {
     public ResponseEntity<String> getIdFromToken(String token){
         return ResponseEntity.ok(tokenManager.getIdFromToken(token).get());
     }
+
+
 }
