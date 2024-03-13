@@ -45,6 +45,7 @@ public class RestApiUrls {
     public static final String GET_ID_FROM_TOKEN = "/get-id-from-token";
     public static final String GET_FAVOURITES = "/get-favourites";
     public static final String ADD_FAVOURITE = "/add-favourite";
+    public static final String GET_FILTERED_HOTELS = "/get-filtered-hotels";
 
 
 

@@ -2,11 +2,13 @@ package com.hotelize.controller;
 
 import com.hotelize.domain.Hotel;
 import com.hotelize.dto.request.HotelAddRequestDto;
+import com.hotelize.dto.request.HotelGetFilteredHotelsRequestDto;
 import com.hotelize.dto.response.HotelAddResponseDto;
 import com.hotelize.service.HotelService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,5 +31,10 @@ public class HotelController {
     @GetMapping(ADD)
     public ResponseEntity<HotelAddResponseDto> add(HotelAddRequestDto dto){
         return ResponseEntity.ok(hotelService.add(dto));
+    }
+
+    @GetMapping(GET_FILTERED_HOTELS)
+    public ResponseEntity<List<Hotel>> getFilteredHotels(@RequestBody HotelGetFilteredHotelsRequestDto dto){
+        return ResponseEntity.ok(hotelService.getFilteredHotels(dto));
     }
 }

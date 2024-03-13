@@ -9,6 +9,7 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -17,14 +18,18 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collection = "tbl_location") // bu sinifa gerek yok simdilik
+@Document(collection = "tbl_location") // not mentioned by instructor but added as required.
 public class Location implements Serializable {
     @Id
     private String id;
 
+    private String country;
+    private String city;
+    private String address;
 
     @CreatedDate
     private LocalDateTime createdAt;
     @LastModifiedDate
     private LocalDateTime updatedAt;
+
 }

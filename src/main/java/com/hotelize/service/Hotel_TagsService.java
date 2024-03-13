@@ -1,7 +1,5 @@
 package com.hotelize.service;
 
-
-import com.hotelize.domain.Hotel;
 import com.hotelize.domain.Hotel_Tags;
 import com.hotelize.domain.Tags;
 import com.hotelize.repository.Hotel_TagsRepository;
@@ -33,5 +31,12 @@ public class Hotel_TagsService extends ServiceManager<Hotel_Tags, String> {
                 .map(x-> tagsService.findTagsByTagId(x))
                 .collect(Collectors.toList());
 
+    }
+    public List<String> findHotelIdsByTagIds(List<String> tagIds){
+        return hotelTagsRepository
+                .findAllByTagIdIn(tagIds)
+                .stream()
+                .map(Hotel_Tags::getHotelId)
+                .collect(Collectors.toList());
     }
 }
