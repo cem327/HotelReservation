@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 public enum ErrorType {
 
     INTERNAL_SERVER_ERROR(5100, "Sunucu Hatasi",HttpStatus.INTERNAL_SERVER_ERROR),
+    INTERNAL_ERROR(5110, "Sunucuda beklenmeye hata oluştu, lütfen terar deneyiniz",HttpStatus.INTERNAL_SERVER_ERROR),
     BAD_REQUEST (4100,"Parametre hatasi", HttpStatus.BAD_REQUEST),
     LOGIN_ERROR(4110,"Kullanici adi veya sifre hatalidir...",HttpStatus.BAD_REQUEST),
     USERNAME_DUPLICATE(4111,"B�yle bir kullanici adi sistemde mevcut...", HttpStatus.BAD_REQUEST),

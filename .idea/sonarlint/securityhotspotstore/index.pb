@@ -684,3 +684,15 @@ B
 et --hard HEAD@{3},2\b\2bd070bbb88771fa8221b21600c1625e708bce0b
 b
 2src/main/java/com/hotelize/mapper/HotelMapper.java,8\b\8b3f4b39f649347d1c72b8637a36e3a0d96a917b
+~
+Nsrc/main/java/com/hotelize/exception/hotel_service_exception/ErrorMessage.java,8\6\86a58f3c0087c2a0c99b2a5a0ad16354a4c736b4
+{
+Ksrc/main/java/com/hotelize/exception/hotel_service_exception/ErrorType.java,1\c\1ce6b83b1bca819c6c7bee7833997056f83bd11d
+ç
+]src/main/java/com/hotelize/exception/hotel_service_exception/HotelGlobalExceptionHandler.java,7\0\704ef626187631ee47fea1f7711314360c4da91d
+Ç
+Rsrc/main/java/com/hotelize/exception/user_profile_service_exception/ErrorType.java,e\1\e12f7e7fb0f6ca01d600cf36d6d1e1e60d9bb7a5
+î
+dsrc/main/java/com/hotelize/exception/user_profile_service_exception/UserProfileServiceException.java,f\0\f071df88f528880b514fbdd0577adf1ec4717e9e
+Ö
+Usrc/main/java/com/hotelize/exception/user_profile_service_exception/ErrorMessage.java,4\7\479f21350ad6d77ace30fc2aaf281bbbaf4b1993
