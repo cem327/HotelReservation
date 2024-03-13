@@ -14,4 +14,6 @@ public interface HotelMapper {
 
     Hotel fromHotelAddRequestDtoToHotel(final HotelAddRequestDto dto);
     HotelAddResponseDto HotelToHotelAddResponseDto(final HotelAddResponseDto dto);
+
+    HotelAddResponseDto fromHotelToHotelAddResponseDto(final Hotel hotel);
 }

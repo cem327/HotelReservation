@@ -14,4 +14,9 @@ public class TagsService extends ServiceManager<Tags, String> {
         super(tagsRepository);
         this.tagsRepository = tagsRepository;
     }
+
+    public Tags findTagsByTagId(String id){
+        return tagsRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Tags not found")); // TODO TAGS EXCEPTION EKLENMELI
+    }
 }

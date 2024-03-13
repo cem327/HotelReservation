@@ -14,11 +14,13 @@ import com.hotelize.mapper.UserProfileMapper;
 import com.hotelize.repository.UserProfileRepository;
 import com.hotelize.utils.JwtTokenManager;
 import com.hotelize.utils.ServiceManager;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Slf4j
 public class UserProfileService extends ServiceManager<UserProfile, String> {
 
     private final UserProfileRepository userProfileRepository;
@@ -70,9 +72,8 @@ public class UserProfileService extends ServiceManager<UserProfile, String> {
 
     public List<Hotel> getFavourite(String token) {
         UserProfile userProfile = findUserByToken(token);
-        hotelService.findAllHotelByIdIn(userProfile.getLikedHotelsId());
 
-        return null;
+        return hotelService.findAllHotelByIdIn(userProfile.getLikedHotelsId());
     }
 
     public Boolean addFavourite(AddFavouriteRequestDto dto) {
