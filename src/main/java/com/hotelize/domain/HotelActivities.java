@@ -21,7 +21,7 @@ public class HotelActivities implements Serializable {
     @Id
     private String id;
 
-    private String otelId; // otel id referansi
+    private String hotelId; // otel id referansi
     private String title; //genelBaslik
     private String description; //detayAciklama
 
