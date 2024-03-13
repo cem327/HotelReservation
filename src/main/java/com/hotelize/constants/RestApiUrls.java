@@ -47,6 +47,8 @@ public class RestApiUrls {
     public static final String ADD_FAVOURITE = "/add-favourite";
     public static final String GET_FILTERED_HOTELS = "/get-filtered-hotels";
 
+    public static final String HOTEL_FIND_SEARCH = "/hotel-find-search";
+
 
 
 }

@@ -1,5 +1,2 @@
 
-X	java:S125
-"<This block of commented-out lines of code should be removed.(ÈÇ½8¦ó¥¶ã1
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8§ó¥¶ã1
+X	java:S125"<This block of commented-out lines of code should be removed.(ÈÇ½8‘¶¾ã1

@@ -61,4 +61,6 @@ public class UserProfileController {
     public ResponseEntity<List<Hotel>> getFavourites(@RequestParam String token){
         return ResponseEntity.ok(userProfileService.getFavourite(token));
     }
+
+
 }
