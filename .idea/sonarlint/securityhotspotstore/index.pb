@@ -680,3 +680,7 @@ c
 3src/main/java/com/hotelize/manager/UserManager.java,7\5\757a73c7659ce4cc9f63cbae1f140ac42307118c
 w
 Gsrc/main/java/com/hotelize/dto/request/UpdateUserProfileRequestDto.java,4\6\467f05ece47746981480ec9c1d56be773c7d024f
+B
+et --hard HEAD@{3},2\b\2bd070bbb88771fa8221b21600c1625e708bce0b
+b
+2src/main/java/com/hotelize/mapper/HotelMapper.java,8\b\8b3f4b39f649347d1c72b8637a36e3a0d96a917b
