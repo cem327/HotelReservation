@@ -63,6 +63,9 @@ public class HotelService extends ServiceManager<Hotel,String> {
 
 
     public List<Hotel> searchHotels(String name, String location){
-        return hotelRepository.findAllByNameContainingIgnoreCaseOrLocationContainingIgnoreCase(name,location);
+        List<Hotel> hotelList = hotelRepository.findAllByNameContainingIgnoreCaseOrLocationContainingIgnoreCase(name,location);
+        return hotelList;
+
+
     }
 }
