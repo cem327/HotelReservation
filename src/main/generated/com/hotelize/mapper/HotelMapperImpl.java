@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-03-13T11:27:15+0300",
+    date = "2024-03-13T15:35:17+0300",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21 (Oracle Corporation)"
 )
 @Component
@@ -31,8 +31,37 @@ public class HotelMapperImpl implements HotelMapper {
             return null;
         }
 
-        HotelAddResponseDto hotelAddResponseDto = new HotelAddResponseDto();
+        HotelAddResponseDto.HotelAddResponseDtoBuilder hotelAddResponseDto = HotelAddResponseDto.builder();
 
-        return hotelAddResponseDto;
+        hotelAddResponseDto.name( dto.getName() );
+        hotelAddResponseDto.location( dto.getLocation() );
+        hotelAddResponseDto.longitude( dto.getLongitude() );
+        hotelAddResponseDto.latitude( dto.getLatitude() );
+        hotelAddResponseDto.totalPoint( dto.getTotalPoint() );
+        hotelAddResponseDto.checkInTime( dto.getCheckInTime() );
+        hotelAddResponseDto.checkOutTime( dto.getCheckOutTime() );
+        hotelAddResponseDto.description( dto.getDescription() );
+
+        return hotelAddResponseDto.build();
+    }
+
+    @Override
+    public HotelAddResponseDto fromHotelToHotelAddResponseDto(Hotel hotel) {
+        if ( hotel == null ) {
+            return null;
+        }
+
+        HotelAddResponseDto.HotelAddResponseDtoBuilder hotelAddResponseDto = HotelAddResponseDto.builder();
+
+        hotelAddResponseDto.name( hotel.getName() );
+        hotelAddResponseDto.location( hotel.getLocation() );
+        hotelAddResponseDto.longitude( hotel.getLongitude() );
+        hotelAddResponseDto.latitude( hotel.getLatitude() );
+        hotelAddResponseDto.totalPoint( hotel.getTotalPoint() );
+        hotelAddResponseDto.checkInTime( hotel.getCheckInTime() );
+        hotelAddResponseDto.checkOutTime( hotel.getCheckOutTime() );
+        hotelAddResponseDto.description( hotel.getDescription() );
+
+        return hotelAddResponseDto.build();
     }
 }
