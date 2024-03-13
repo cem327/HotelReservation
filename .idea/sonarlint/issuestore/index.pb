@@ -696,3 +696,11 @@ Rsrc/main/java/com/hotelize/exception/user_profile_service_exception/ErrorType.j
 dsrc/main/java/com/hotelize/exception/user_profile_service_exception/UserProfileServiceException.java,f\0\f071df88f528880b514fbdd0577adf1ec4717e9e
 …
 Usrc/main/java/com/hotelize/exception/user_profile_service_exception/ErrorMessage.java,4\7\479f21350ad6d77ace30fc2aaf281bbbaf4b1993
+r
+Bsrc/main/java/com/hotelize/dto/request/AddFavouriteRequestDto.java,8\4\840a5f356e3e350d7451e145e10f160381876fc3
+n
+>src/main/java/com/hotelize/dto/request/HotelAddRequestDto.java,7\c\7ce127f8b342594b717fe15b9cf2ca4c20558449
+w
+Gsrc/main/java/com/hotelize/dto/request/UserProfileUpdateRequestDto.java,d\d\dd84ab0af08219e86d2584a564ecd02bd9bf5834
+p
+@src/main/java/com/hotelize/dto/response/HotelAddResponseDto.java,c\b\cb302981faeb6a995460a7eb88a1b3dc1feeb564
