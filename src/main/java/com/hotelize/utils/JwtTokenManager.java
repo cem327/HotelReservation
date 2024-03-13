@@ -80,7 +80,7 @@ public class JwtTokenManager {
         return true;
     }
 
-    public Optional<Long> getIdFromToken(String token){
+    public Optional<String> getIdFromToken(String token){
         try {
             Algorithm algorithm = Algorithm.HMAC512(secretKey);
             JWTVerifier verifier = JWT.require(algorithm).withIssuer(issuer).withAudience(audience).build();
@@ -90,7 +90,7 @@ public class JwtTokenManager {
                 throw new AuthManagerException(ErrorType.INVALID_TOKEN);
             }
             Long id = decodedJWT.getClaim("id").asLong();
-            return Optional.of(id);
+            return Optional.of(String.valueOf(id));
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
