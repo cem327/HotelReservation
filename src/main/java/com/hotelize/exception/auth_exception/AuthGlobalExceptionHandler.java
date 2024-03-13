@@ -1,6 +1,7 @@
-package com.hotelize.exception.user_profile_service_exception;
+package com.hotelize.exception.auth_exception;
 
 
+import com.hotelize.service.AuthService;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,15 +20,15 @@ public class AuthGlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<ErrorMessage> globalHandler(RuntimeException runtimeException) {
 
-        return new ResponseEntity<>(createErrorMessage(runtimeException, ErrorType.INTERNAL_ERROR)
+        return new ResponseEntity<>(createErrorMessage(runtimeException, ErrorType.INTERNAL_SERVER_ERROR)
                 , HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(UserProfileServiceException.class)
+    @ExceptionHandler(AuthManagerException.class)
     @ResponseBody
-    public ResponseEntity<ErrorMessage> authServiceHandler(UserProfileServiceException UserProfileServiceException){
-        return new ResponseEntity<>(createErrorMessage(UserProfileServiceException, UserProfileServiceException.getErrorType()),
-                UserProfileServiceException.getErrorType().getHttpStatus());
+    public ResponseEntity<ErrorMessage> authServiceHandler(AuthManagerException AuthManagerException){
+        return new ResponseEntity<>(createErrorMessage(AuthManagerException, AuthManagerException.getErrorType()),
+                AuthManagerException.getErrorType().getHttpStatus());
     }
 
     @ExceptionHandler(ConstraintViolationException.class)
@@ -49,9 +50,9 @@ public class AuthGlobalExceptionHandler {
                 .getBindingResult()
                 .getFieldErrors()
                 .forEach(e -> fields.add(e.getField() + ": " + e.getDefaultMessage()));
-        ErrorMessage errorMessage = createErrorMessage(exception, ErrorType.BAD_REQUEST_ERROR);
+        ErrorMessage errorMessage = createErrorMessage(exception, ErrorType.BAD_REQUEST);
         errorMessage.setFields(fields);
-        return new ResponseEntity<>(errorMessage, ErrorType.BAD_REQUEST_ERROR.getHttpStatus());
+        return new ResponseEntity<>(errorMessage, ErrorType.BAD_REQUEST.getHttpStatus());
     }
 
 
