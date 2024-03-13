@@ -2,9 +2,11 @@ package com.hotelize.service;
 
 import com.hotelize.domain.Hotel;
 import com.hotelize.domain.UserProfile;
+import com.hotelize.dto.request.AddFavouriteRequestDto;
 import com.hotelize.dto.request.CreateUserRequestDto;
 import com.hotelize.dto.request.UserProfileUpdateRequestDto;
 import com.hotelize.dto.response.CreateUserResponseDto;
+import com.hotelize.exception.auth_exception.AuthManagerException;
 import com.hotelize.exception.user_profile_service_exception.ErrorType;
 import com.hotelize.exception.user_profile_service_exception.UserProfileServiceException;
 import com.hotelize.mapper.UserProfileMapper;
@@ -20,7 +22,9 @@ public class UserProfileService extends ServiceManager<UserProfile, String> {
 
     private final UserProfileRepository userProfileRepository;
     AuthService authService;
+    HotelService hotelService;
     private final JwtTokenManager jwtTokenManager;
+
 
     public UserProfileService(UserProfileRepository userProfileRepository,JwtTokenManager jwtTokenManager) {
         super(userProfileRepository);
@@ -32,7 +36,8 @@ public class UserProfileService extends ServiceManager<UserProfile, String> {
 
     public CreateUserResponseDto createUserProfile(CreateUserRequestDto dto){
 
-//        authService.findById(dto.getAuthId()).orElseThrow(() -> new AuthServiceException(ErrorType.ERROR_INVALID_LOGIN_PARAMETER));
+        authService.findById(dto.getAuthId())
+                .orElseThrow(() -> new AuthManagerException(com.hotelize.exception.auth_exception.ErrorType.AUTH_ID_NOT_FOUND));
 
 
         UserProfile userProfile = UserProfileMapper.INSTANCE.fromCreateRequestToUserProfile(dto);
@@ -47,13 +52,13 @@ public class UserProfileService extends ServiceManager<UserProfile, String> {
 
     public UserProfile findUserByToken(String token) {
         return userProfileRepository
-                .findByAuthId(jwtTokenManager.getIdFromToken(token)
-                        .orElseThrow(() -> new UserProfileServiceException(ErrorType.ERROR_FIND_ID_BY_TOKEN)));
+                .findOptionalByAuthId(jwtTokenManager.getIdFromToken(token)
+                        .orElseThrow(() -> new UserProfileServiceException(ErrorType.ERROR_FIND_ID_BY_TOKEN)))
+                .orElseThrow(() -> new UserProfileServiceException(ErrorType.ERROR_USER_NOT_FOUND));
     }
     public UserProfile update(UserProfileUpdateRequestDto dto) {
-        UserProfile userProfile =userProfileRepository
-                .findByAuthId(jwtTokenManager.getIdFromToken(dto.getToken())
-                        .orElseThrow(() -> new UserProfileServiceException(ErrorType.ERROR_FIND_ID_BY_TOKEN)));
+
+        UserProfile userProfile = findUserByToken(dto.getToken());
 
         userProfile.setName(dto.getNewName()); // yeni verilen isim set ediliyor.
         userProfile.setSurname(dto.getNewSurname()); // yeni verilen soyisim set ediliyor.
@@ -61,7 +66,17 @@ public class UserProfileService extends ServiceManager<UserProfile, String> {
         return userProfileRepository.save(userProfile);
     }
 
-    public List<Hotel> getFavourite() {
-        return null; // TODO BURADA KALINDI . FAVORI OTELLER EKLENMESI GEREKIYOR. TBL COMMENTTEN ILERLENEBILIR.
+
+    public List<Hotel> getFavourite(String token) {
+        UserProfile userProfile = findUserByToken(token);
+//        hotelService.userProfile.getLikedHotelsId();
+
+        return null;
     }
+
+    public Boolean addFavourite(AddFavouriteRequestDto dto) {
+        return null;
+    }
+
+
 }

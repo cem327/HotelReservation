@@ -41,6 +41,7 @@ public class RestApiUrls {
     public static final String FIND_BY_ID = "/find-by-id";
     public static final String FIND_POPULAR = "/find-popular";
     public static final String FIND_BY_TOKEN = "/find-by-token";
+    public static final String ADD_FAVOURITE = "/add-favourite";
     public static final String FAVOURITE = "/favourite";
 
 
