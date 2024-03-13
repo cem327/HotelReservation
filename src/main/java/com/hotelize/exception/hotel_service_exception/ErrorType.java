@@ -15,6 +15,7 @@ public enum ErrorType {
     ERROR_INVALID_LOGIN_PARAMETER(2001,"Kullanıcı adı ya da Şifre hatalıdır. Lütfen tekrar deneyiniz.t",HttpStatus.BAD_REQUEST),
     ERROR_CREATE_TOKEN(1003,"Token oluşturma hatası. Lütfen tekrar deneyiniz.",HttpStatus.INTERNAL_SERVER_ERROR),
     BAD_REQUEST_ERROR(1001, "Girilen parametreler hatalıdır. Lütfen düzelterek tekrar deneyiniz", HttpStatus.BAD_REQUEST),
+    HOTEL_NOT_FOUND(2001, "Verilen otel idsi icin otel bulunamadi.", HttpStatus.NOT_FOUND),
     INVALID_TOKEN(4114,"Geçersiz token" ,HttpStatus.BAD_REQUEST);
 
     int code;

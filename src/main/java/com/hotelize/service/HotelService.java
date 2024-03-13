@@ -26,7 +26,13 @@ public class HotelService extends ServiceManager<Hotel,String> {
 
     public HotelAddResponseDto add(HotelAddRequestDto dto) {
 
-
         return null;
+    }
+
+    public List<Hotel> findAllHotelByIdIn(List<String> ids){
+        return hotelRepository.findAllByIdIn(ids);
+    }
+    public Boolean existsById(String id){
+        return hotelRepository.existsById(id);
     }
 }

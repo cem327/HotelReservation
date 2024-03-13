@@ -7,6 +7,7 @@ import com.hotelize.dto.request.CreateUserRequestDto;
 import com.hotelize.dto.request.UserProfileUpdateRequestDto;
 import com.hotelize.dto.response.CreateUserResponseDto;
 import com.hotelize.exception.auth_exception.AuthManagerException;
+import com.hotelize.exception.hotel_service_exception.HotelServiceException;
 import com.hotelize.exception.user_profile_service_exception.ErrorType;
 import com.hotelize.exception.user_profile_service_exception.UserProfileServiceException;
 import com.hotelize.mapper.UserProfileMapper;
@@ -60,7 +61,7 @@ public class UserProfileService extends ServiceManager<UserProfile, String> {
 
         UserProfile userProfile = findUserByToken(dto.getToken());
 
-        userProfile.setName(dto.getNewName()); // yeni verilen isim set ediliyor.
+        userProfile.setName(dto.getNewName()); // yeni verilen isim set ediliyor. // TODO EGER VERILMEDIYSE KULLANILAMAYACAK
         userProfile.setSurname(dto.getNewSurname()); // yeni verilen soyisim set ediliyor.
         userProfile.setAddress(dto.getNewAddress()); // yeni verilen adres set ediliyor.
         return userProfileRepository.save(userProfile);
@@ -69,13 +70,20 @@ public class UserProfileService extends ServiceManager<UserProfile, String> {
 
     public List<Hotel> getFavourite(String token) {
         UserProfile userProfile = findUserByToken(token);
-//        hotelService.userProfile.getLikedHotelsId();
+        hotelService.findAllHotelByIdIn(userProfile.getLikedHotelsId());
 
         return null;
     }
 
     public Boolean addFavourite(AddFavouriteRequestDto dto) {
-        return null;
+        UserProfile userProfile = findUserByToken(dto.getToken());
+        if(hotelService.existsById(dto.getHotelId()))
+        userProfile.getLikedHotelsId().add(dto.getHotelId());
+        else{
+            throw new HotelServiceException(com.hotelize.exception.hotel_service_exception.ErrorType.HOTEL_NOT_FOUND);
+        }
+        userProfileRepository.save(userProfile);
+        return true;
     }
 
 

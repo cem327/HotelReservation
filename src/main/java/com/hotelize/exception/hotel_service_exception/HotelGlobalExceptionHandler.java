@@ -25,7 +25,7 @@ public class HotelGlobalExceptionHandler {
 
     @ExceptionHandler(HotelServiceException.class)
     @ResponseBody
-    public ResponseEntity<ErrorMessage> authServiceHandler(HotelServiceException HotelServiceException){
+    public ResponseEntity<ErrorMessage> HotelServiceHandler(HotelServiceException HotelServiceException){
         return new ResponseEntity<>(createErrorMessage(HotelServiceException, HotelServiceException.getErrorType()),
                 HotelServiceException.getErrorType().getHttpStatus());
     }
