@@ -8,4 +8,7 @@ import java.util.List;
 public interface HotelRepository extends MongoRepository<Hotel, String> {
 
 //    List<Hotel> findTop10();
+    List<Hotel> findAllByIdIn(List<String> ids);
+
+
 }

@@ -42,8 +42,9 @@ public class RestApiUrls {
     public static final String FIND_POPULAR = "/find-popular";
     public static final String DELETE_BY_TOKEN = "/delete-by-token";
     public static final String ACTIVATE_STATUS = "/activate-status";
-    public static final String USER_UPDATE = "/user-update";
-
+    public static final String GET_ID_FROM_TOKEN = "/get-id-from-token";
+    public static final String GET_FAVOURITES = "/get-favourites";
+    public static final String ADD_FAVOURITE = "/add-favourite";
 
 
 

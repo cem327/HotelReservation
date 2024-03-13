@@ -14,4 +14,5 @@ public class Hotel_FeaturesService extends ServiceManager<Hotel_Features, String
         super(hotelFeaturesRepository);
         this.hotelFeaturesRepository = hotelFeaturesRepository;
     }
+
 }
