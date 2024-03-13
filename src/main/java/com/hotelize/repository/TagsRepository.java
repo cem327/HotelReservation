@@ -5,5 +5,5 @@ import com.hotelize.domain.Tags;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 
-public interface TagsRepository extends MongoRepository<Tags, String>, QuerydslPredicateExecutor<Tags> {
+public interface TagsRepository extends MongoRepository<Tags, String> {
 }

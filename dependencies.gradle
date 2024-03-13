@@ -8,7 +8,7 @@ ext{
             postgresql              : '42.7.1',
             springCloud             : '4.1.0',
             jwt                     : '4.4.0',
-            springCircuit           : '3.1.0'
+            springCircuit           : '3.1.0',
     ]
 
     libs = [

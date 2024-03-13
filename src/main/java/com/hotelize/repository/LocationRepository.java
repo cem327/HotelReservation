@@ -6,7 +6,7 @@ import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 
 import java.util.List;
 
-public interface LocationRepository extends MongoRepository<Location, String>, QuerydslPredicateExecutor<Location> {
+public interface LocationRepository extends MongoRepository<Location, String> {
 
 
 

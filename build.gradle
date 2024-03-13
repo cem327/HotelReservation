@@ -51,13 +51,13 @@ allprojects {
         implementation          libs.jwt
         implementation          libs.springBootStarterActuator
         implementation          libs.springBootStarterDataMongoDB
-
     }
 
     test{
         useJUnitPlatform()
     }
 }
+
 
 configurations {
     compileOnly {
