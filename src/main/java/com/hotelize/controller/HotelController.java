@@ -30,39 +30,11 @@ public class HotelController {
         return ResponseEntity.ok(hotelService.add(dto));
     }
 
-
     @GetMapping(FIND_BY_ID)
     public ResponseEntity<Hotel> findById(String id){
         return ResponseEntity.ok(hotelService.findHotelById(id));
     }
 
-    @GetMapping(HOTEL_FIND_SEARCH)
-    public ResponseEntity<List<Hotel>> searchHotels(@RequestParam String name, String location){
-        List<Hotel> hotels = hotelService.searchHotels(name,location);
-
-
-        return ResponseEntity.ok(hotels);
-    }
-
-
-    @GetMapping(GET_FILTERED_HOTELS)
-    public ResponseEntity<List<Hotel>> getFilteredHotels(@RequestBody HotelGetFilteredHotelsRequestDto dto){
-        return ResponseEntity.ok(hotelService.getFilteredHotels(dto));
-    }
-
-
-    @GetMapping(FIND_BY_ID)
-    public ResponseEntity<Hotel> findById(String id){
-        return ResponseEntity.ok(hotelService.findHotelById(id));
-    }
-
-    @GetMapping(HOTEL_FIND_SEARCH)
-    public ResponseEntity<List<Hotel>> searchHotels(@RequestParam String name, String location){
-        List<Hotel> hotels = hotelService.searchHotels(name,location);
-
-
-        return ResponseEntity.ok(hotels);
-    }
 
     @GetMapping(GET_FILTERED_HOTELS)
     public ResponseEntity<List<Hotel>> getFilteredHotels(@RequestBody HotelGetFilteredHotelsRequestDto dto){

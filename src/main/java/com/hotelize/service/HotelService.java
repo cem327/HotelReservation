@@ -137,4 +137,10 @@ public class HotelService extends ServiceManager<Hotel,String> {
         return commonHotels;
 
     }
+
+    public Hotel findHotelById(String id) {
+        return hotelRepository
+                .findOptionalById(id)
+                .orElseThrow(() -> new HotelServiceException(ErrorType.HOTEL_NOT_FOUND));
+    }
 }
