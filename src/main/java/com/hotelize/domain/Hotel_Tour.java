@@ -21,7 +21,7 @@ public class Hotel_Tour implements Serializable {
     @Id
     private String id;
     private String tourId; // tour referansi
-    private String otelId; // otel referansi
+    private String hotelId; // otel referansi
 
 
     @CreatedDate

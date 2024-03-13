@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 public class Hotel_Tags implements Serializable {
     @Id
     private String id;
-    private String otelId; // otel id referansi
+    private String hotelId; // otel id referansi
     private String tagId; // tag id referansi
 
 

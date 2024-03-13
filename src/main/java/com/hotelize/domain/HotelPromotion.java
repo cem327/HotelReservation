@@ -20,7 +20,7 @@ public class HotelPromotion implements Serializable {
     @Id
     private String id;
 
-    private String otelId; // otel id referansi
+    private String hotelId; // otel id referansi
     private String title; // baslik
     private String description; // aciklama
 }
