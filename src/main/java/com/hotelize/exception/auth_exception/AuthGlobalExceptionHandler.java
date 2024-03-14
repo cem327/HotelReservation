@@ -1,7 +1,6 @@
 package com.hotelize.exception.auth_exception;
 
 
-import com.hotelize.service.AuthService;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,9 +23,9 @@ public class AuthGlobalExceptionHandler {
                 , HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(AuthManagerException.class)
+    @ExceptionHandler(AuthServiceException.class)
     @ResponseBody
-    public ResponseEntity<ErrorMessage> authServiceHandler(AuthManagerException AuthManagerException){
+    public ResponseEntity<ErrorMessage> authServiceHandler(AuthServiceException AuthManagerException){
         return new ResponseEntity<>(createErrorMessage(AuthManagerException, AuthManagerException.getErrorType()),
                 AuthManagerException.getErrorType().getHttpStatus());
     }

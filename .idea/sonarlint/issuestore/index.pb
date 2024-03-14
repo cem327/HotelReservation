@@ -690,3 +690,5 @@ DockerFile,4\0\40f7331d8e28c3c74df3da70560f362ea1796985
 :
 
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
+}
+Msrc/main/java/com/hotelize/exception/auth_exception/AuthServiceException.java,8\8\88ce9f945bbd482a3ed2e9ba98b89980252dd9e8

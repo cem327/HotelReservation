@@ -1,3 +1,8 @@
 
+y
+java:S14880"\Immediately return this expression instead of assigning it to the temporary variable "auth".(ΡΟνΖ8ι¤εγ1
 V
-java:S1172"9Remove this unused method parameter "userProfileService".(ωΰκ8δΌΎγ1
+java:S1172"9Remove this unused method parameter "userProfileService".(ωΰκ8“Ωεγ1
+X	java:S1256"<This block of commented-out lines of code should be removed.(¬΄8βλ£εγ1
+P
+java:S1068"3Remove this unused "jwtTokenManager" private field.(ύ 8γλ£εγ1
