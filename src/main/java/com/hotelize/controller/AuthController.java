@@ -27,7 +27,7 @@ public class AuthController {
     private final JwtTokenManager tokenManager;
 
 
-    @GetMapping(REGISTER)
+    @PostMapping(REGISTER)
     public ResponseEntity<AuthRegisterResponseDto> register(AuthRegisterRequestDto request) {return authService.register(request);
     }
 
@@ -43,8 +43,8 @@ public class AuthController {
     }
 
     @GetMapping("/create-token")
-    public ResponseEntity<String> createToken(String id, ERole role){
-        return ResponseEntity.ok(tokenManager.createToken(id,role).get());
+    public ResponseEntity<String> createToken(String id){
+        return ResponseEntity.ok(tokenManager.createToken(id).get());
     }
 
 
