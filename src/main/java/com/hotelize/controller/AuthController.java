@@ -7,8 +7,8 @@ import com.hotelize.dto.response.AuthRegisterResponseDto;
 import com.hotelize.service.AuthService;
 import com.hotelize.utils.JwtTokenManager;
 import com.hotelize.utils.enums.ERole;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
 import org.springframework.http.ResponseEntity;
 import com.hotelize.exception.auth_exception.*;
 import org.springframework.web.bind.annotation.*;
@@ -46,7 +46,7 @@ public class AuthController {
     @GetMapping(CREATE_TOKEN)
     @CrossOrigin("*")
     public ResponseEntity<String> createToken(String id, ERole role){
-        return ResponseEntity.ok(tokenManager.createToken(id,role).get());
+        return ResponseEntity.ok(tokenManager.createToken(id,role));
     }
 
 
