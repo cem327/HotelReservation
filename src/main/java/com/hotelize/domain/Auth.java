@@ -29,9 +29,8 @@ public class Auth implements Serializable {
     private String phone;
     private boolean isActive;
 
-    @CreatedDate
+
     private LocalDateTime createdAt;
-    @LastModifiedDate
     private LocalDateTime updatedAt;
 
 

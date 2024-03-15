@@ -136,8 +136,6 @@ c
 p
 @src/main/java/com/hotelize/repository/UserProfileRepository.java,f\1\f159702212f43554b06c396d818796ede3e6b3c6
 Å
-Q.idea/sonarlint/securityhotspotstore/c/c/cc6945aef3082091a06ec9c20ebb89cb4a9d24d5,b\c\bc9e86c67d59dfc60017ec0b7bb762743615ece6
-Å
 Q.idea/sonarlint/securityhotspotstore/c/4/c4169baddaffc90b6b6e6fb3e9c91485d84bff34,e\d\ed4e10beb18483b0d82848805d39db85a4879356
 w
 G.idea/sonarlint/issuestore/5/c/5c133732bcdd9ec670e2d49d359bdf9780ef233d,4\e\4e16625c0fd27407fcbafe65bed396665b7b7543
@@ -155,8 +153,6 @@ Q.idea/sonarlint/securityhotspotstore/2/5/25f6469773b9f3ebb994178c1114a60412389f
 Q.idea/sonarlint/securityhotspotstore/9/4/9474a2ab7bdc19076e938c08fa8dbb3104fd1dd0,5\9\59105ff26a7f7f78965d7f27d1b2926bf529b9a2
 Å
 Q.idea/sonarlint/securityhotspotstore/6/0/60c9b12296692575b1db7b3098157471f2b4cd7b,e\9\e99539704565509ac09fdf1e2fa8ec6c96109f25
-Å
-Q.idea/sonarlint/securityhotspotstore/9/d/9d7f5da94fd540d373866c3ab2cd83642aa7e774,4\8\4822618cab42ffef004a1579c1d3798d62391a93
 Å
 Q.idea/sonarlint/securityhotspotstore/2/0/208e6b0ef599de821566e35d158e758c06bd813e,9\e\9e3d0b159c54df7be255261d3c317ca5ffb5ea53
 Å
@@ -181,8 +177,6 @@ w
 G.idea/sonarlint/issuestore/7/c/7cd1a947cd53627b7a1e575430b21835f189d667,a\4\a46e1928471606ceccfb7d6700e0845c257ed83e
 Å
 Q.idea/sonarlint/securityhotspotstore/8/3/83bbcf836d03501cac1b350f216374a2805603ac,8\d\8db06ef215b900cae1e8b248ccce5b4825f9404c
-Å
-Q.idea/sonarlint/securityhotspotstore/d/7/d7dffc47562ffa1bacb89b4bd93d6d469feeffb6,5\9\598162a9c2fa8773903aa4217a59987d5daf3fcc
 w
 G.idea/sonarlint/issuestore/e/2/e2b0a5d15913dfbad973e4ee142f8b0cf4b0a9b0,3\9\397d0198d65672c4e7b1c06cfb87bd6b036afce3
 w
@@ -640,12 +634,6 @@ a
 1src/main/java/com/hotelize/utils/enums/ERole.java,7\a\7aad841bb582a46a03bf41337961c9e077586b5f
 e
 5src/main/java/com/hotelize/utils/JwtTokenManager.java,e\6\e69ba396066ebdaab841df2f02be3c4f6bd7c218
-}
-Msrc/main/java/com/hotelize/exception/Auth_Exception/AuthManagerException.java,e\6\e66ede61e643ba7841e1eac3219d1900783b78b0
-}
-Msrc/main/java/com/hotelize/exception/Auth_exception/AuthManagerException.java,e\4\e478fb17d73df383eb327f61e28ded96a965f233
-}
-Msrc/main/java/com/hotelize/exception/auth_exception/AuthManagerException.java,4\f\4f79d2d3dcef9d4ebd1f3e15b232723fb34b6dbe
 É
 Ssrc/main/java/com/hotelize/exception/auth_exception/AuthGlobalExceptionHandler.java,5\0\50a9f49c6aadcf1e0bb6b914175e3e1d5bacdd41
 á

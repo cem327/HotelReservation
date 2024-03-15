@@ -21,22 +21,26 @@ public class HotelController {
     private final HotelService hotelService;
 
     @GetMapping(FIND_ALL)
+    @CrossOrigin("*")
     public ResponseEntity<List<Hotel>> findAll(){
         return ResponseEntity.ok(hotelService.findAll());
     }
 
     @GetMapping(ADD)
+    @CrossOrigin("*")
     public ResponseEntity<HotelAddResponseDto> add(HotelAddRequestDto dto){
         return ResponseEntity.ok(hotelService.add(dto));
     }
 
     @GetMapping(FIND_BY_ID)
+    @CrossOrigin("*")
     public ResponseEntity<Hotel> findById(String id){
         return ResponseEntity.ok(hotelService.findHotelById(id));
     }
 
 
     @GetMapping(GET_FILTERED_HOTELS)
+    @CrossOrigin("*")
     public ResponseEntity<List<Hotel>> getFilteredHotels(@RequestBody HotelGetFilteredHotelsRequestDto dto){
         return ResponseEntity.ok(hotelService.getFilteredHotels(dto));
     }

@@ -28,10 +28,12 @@ public class AuthController {
 
 
     @PostMapping(REGISTER)
+    @CrossOrigin("*")
     public ResponseEntity<AuthRegisterResponseDto> register(AuthRegisterRequestDto request) {return authService.register(request);
     }
 
     @PostMapping(LOGIN)
+    @CrossOrigin("*")
     public ResponseEntity<String> login(@RequestBody @Valid LoginRequestDto dto){
         Optional<Auth> auth = authService.login(dto);
         if (auth.isEmpty())
@@ -43,6 +45,7 @@ public class AuthController {
     }
 
     @GetMapping("/create-token")
+    @CrossOrigin("*")
     public ResponseEntity<String> createToken(String id){
         return ResponseEntity.ok(tokenManager.createToken(id).get());
     }
