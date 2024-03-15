@@ -1,0 +1,106 @@
+[33md61e730[m[33m ([m[1;36mHEAD -> [m[1;32mgirayBranch[m[33m)[m HEAD@{0}: commit (merge): Merge branch 'master' of https://github.com/cem327/HotelReservation into girayBranch
+[33mc40d632[m[33m ([m[1;31morigin/girayBranch[m[33m)[m HEAD@{1}: checkout: moving from master to girayBranch
+[33m9be9ad2[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{2}: commit (merge): Merge remote-tracking branch 'origin/master'
+[33mc40d632[m[33m ([m[1;31morigin/girayBranch[m[33m)[m HEAD@{3}: merge girayBranch: Fast-forward
+[33m5ba85ed[m HEAD@{4}: checkout: moving from girayBranch to master
+[33mc40d632[m[33m ([m[1;31morigin/girayBranch[m[33m)[m HEAD@{5}: commit: Search ve findById methodları eklendi.
+[33md9346c2[m HEAD@{6}: commit (merge): Merge branch 'master' of https://github.com/cem327/HotelReservation into girayBranch
+[33mf9e4d70[m HEAD@{7}: commit: UpdateUserProfile Eklendi.
+[33m0f7c576[m HEAD@{8}: checkout: moving from master to girayBranch
+[33m5ba85ed[m HEAD@{9}: commit (merge): Merge remote-tracking branch 'origin/master'
+[33m0f7c576[m HEAD@{10}: merge girayBranch: Fast-forward
+[33mce56065[m HEAD@{11}: checkout: moving from girayBranch to master
+[33m0f7c576[m HEAD@{12}: commit: getIdFromToken Eklendi.
+[33ma3f43bd[m HEAD@{13}: pull --no-stat -v --progress origin master: Fast-forward
+[33mce56065[m HEAD@{14}: checkout: moving from master to girayBranch
+[33mce56065[m HEAD@{15}: merge girayBranch: Fast-forward
+[33m48dd129[m HEAD@{16}: checkout: moving from girayBranch to master
+[33mce56065[m HEAD@{17}: commit: Hatalar giderildi 3.
+[33m48dd129[m HEAD@{18}: checkout: moving from master to girayBranch
+[33m48dd129[m HEAD@{19}: merge girayBranch: Fast-forward
+[33m4a28e21[m HEAD@{20}: checkout: moving from girayBranch to master
+[33m48dd129[m HEAD@{21}: commit: Hatalar giderildi 2.
+[33m4a28e21[m HEAD@{22}: checkout: moving from master to girayBranch
+[33m4a28e21[m HEAD@{23}: merge girayBranch: Fast-forward
+[33m140ef1d[m HEAD@{24}: checkout: moving from girayBranch to master
+[33m4a28e21[m HEAD@{25}: commit: Hatalar giderildi.
+[33m338701b[m HEAD@{26}: pull --no-stat -v --progress origin master: Fast-forward
+[33m140ef1d[m HEAD@{27}: checkout: moving from master to girayBranch
+[33m140ef1d[m HEAD@{28}: merge girayBranch: Fast-forward
+[33md0fb42c[m HEAD@{29}: checkout: moving from girayBranch to master
+[33m140ef1d[m HEAD@{30}: commit: Login methodu eklendi
+[33m298e7b4[m HEAD@{31}: commit: AuthManager eklendi.
+[33maedd883[m HEAD@{32}: commit (merge): Merge branch 'master' of https://github.com/cem327/HotelReservation into girayBranch
+[33me2cbdd4[m HEAD@{33}: commit: Enumlar eklendi.
+[33m4cd7ba7[m HEAD@{34}: rebase: checkout girayBranch
+[33m4cd7ba7[m HEAD@{35}: rebase: checkout girayBranch
+[33m4cd7ba7[m HEAD@{36}: commit: Enumlar eklendi.
+[33md0fb42c[m HEAD@{37}: checkout: moving from master to girayBranch
+[33md0fb42c[m HEAD@{38}: merge girayBranch: Fast-forward
+[33m0497020[m HEAD@{39}: checkout: moving from girayBranch to master
+[33md0fb42c[m HEAD@{40}: commit: Dto, AuthController Eklendi.
+[33m4163c94[m HEAD@{41}: commit (merge): Merge branch 'master' of https://github.com/cem327/HotelReservation into girayBranch
+[33m0b2416b[m HEAD@{42}: commit: 2.
+[33m285ba13[m HEAD@{43}: checkout: moving from girayBranch to girayBranch
+[33m285ba13[m HEAD@{44}: branch: Reset to origin/girayBranch
+[33m285ba13[m HEAD@{45}: checkout: moving from girayBranch to girayBranch
+[33m285ba13[m HEAD@{46}: branch: Reset to origin/girayBranch
+[33m285ba13[m HEAD@{47}: checkout: moving from master to girayBranch
+[33m1642888[m HEAD@{48}: commit (merge): Merge branch 'girayBranch'
+[33m926977e[m HEAD@{49}: checkout: moving from girayBranch to master
+[33m285ba13[m HEAD@{50}: commit: Dto ve Mapper eklendi.
+[33mb4995d5[m HEAD@{51}: commit (merge): Merge branch 'master' of https://github.com/cem327/HotelReservation into girayBranch
+[33m7da7e0c[m HEAD@{52}: commit: .
+[33m661490f[m HEAD@{53}: pull --no-stat -v --progress origin master: updating HEAD
+[33m661490f[m HEAD@{54}: checkout: moving from master to girayBranch
+[33m926977e[m HEAD@{55}: commit (merge): Merge branch 'girayBranch'
+[33m24141d8[m HEAD@{56}: checkout: moving from girayBranch to master
+[33m661490f[m HEAD@{57}: checkout: moving from girayBranch to girayBranch
+[33m661490f[m HEAD@{58}: branch: Reset to origin/girayBranch
+[33m661490f[m HEAD@{59}: checkout: moving from master to girayBranch
+[33m24141d8[m HEAD@{60}: checkout: moving from girayBranch to master
+[33m661490f[m HEAD@{61}: checkout: moving from girayBranch to girayBranch
+[33m661490f[m HEAD@{62}: branch: Reset to origin/girayBranch
+[33m661490f[m HEAD@{63}: checkout: moving from master to girayBranch
+[33m24141d8[m HEAD@{64}: commit: Sonarlint uzantısı gitignore ile düzeltildi.
+[33m28797f8[m HEAD@{65}: checkout: moving from master to master
+[33m28797f8[m HEAD@{66}: branch: Reset to origin/master
+[33m28797f8[m HEAD@{67}: checkout: moving from master to master
+[33m28797f8[m HEAD@{68}: branch: Reset to origin/master
+[33m28797f8[m HEAD@{69}: checkout: moving from master to master
+[33m28797f8[m HEAD@{70}: branch: Reset to origin/master
+[33m28797f8[m HEAD@{71}: checkout: moving from master to master
+[33m28797f8[m HEAD@{72}: branch: Reset to origin/master
+[33m28797f8[m HEAD@{73}: commit: Service hatalar düzeltildi.
+[33m41638ed[m HEAD@{74}: pull --no-stat -v --progress origin master: Fast-forward
+[33m1e02b11[m HEAD@{75}: commit: Repositorylere MongoRepository düzeltildi.
+[33m9c558ce[m HEAD@{76}: checkout: moving from girayBranch to master
+[33m661490f[m HEAD@{77}: commit: Repositorylere MongoRepository düzeltildi.
+[33m9c558ce[m HEAD@{78}: pull --no-stat -v --progress origin master: Fast-forward
+[33m06d8611[m HEAD@{79}: checkout: moving from girayBranch to girayBranch
+[33m06d8611[m HEAD@{80}: branch: Reset to origin/girayBranch
+[33m06d8611[m HEAD@{81}: checkout: moving from master to girayBranch
+[33m9c558ce[m HEAD@{82}: merge origin/master: Merge made by the 'ort' strategy.
+[33m06d8611[m HEAD@{83}: merge girayBranch: Fast-forward
+[33m9752385[m HEAD@{84}: checkout: moving from master to master
+[33m9752385[m HEAD@{85}: branch: Reset to origin/master
+[33m9752385[m HEAD@{86}: checkout: moving from girayBranch to master
+[33m06d8611[m HEAD@{87}: commit: Controller Service ve RestApiUrl Eklendi.
+[33m9752385[m HEAD@{88}: pull --no-stat -v --progress origin master: Fast-forward
+[33m0d6e153[m HEAD@{89}: checkout: moving from girayBranch to girayBranch
+[33m0d6e153[m HEAD@{90}: branch: Reset to origin/girayBranch
+[33m0d6e153[m HEAD@{91}: checkout: moving from master to girayBranch
+[33m0d6e153[m HEAD@{92}: rebase: checkout master
+[33m0d6e153[m HEAD@{93}: checkout: moving from master to girayBranch
+[33m0d6e153[m HEAD@{94}: merge girayBranch: Fast-forward
+[33mc7b145f[m HEAD@{95}: checkout: moving from girayBranch to master
+[33m0d6e153[m HEAD@{96}: commit: Repositoryler eklendi.
+[33m1e7ce0e[m HEAD@{97}: merge origin/girayBranch: Fast-forward
+[33m75ca430[m HEAD@{98}: merge origin/girayBranch: Fast-forward
+[33mff67201[m HEAD@{99}: merge origin/girayBranch: Fast-forward
+[33mc7b145f[m HEAD@{100}: checkout: moving from girayBranch to girayBranch
+[33mc7b145f[m HEAD@{101}: branch: Reset to origin/girayBranch
+[33mc7b145f[m HEAD@{102}: checkout: moving from girayBranch to girayBranch
+[33mc7b145f[m HEAD@{103}: branch: Reset to origin/girayBranch
+[33mc7b145f[m HEAD@{104}: checkout: moving from master to girayBranch
+[33mc7b145f[m HEAD@{105}: clone: from https://github.com/cem327/HotelReservation.git

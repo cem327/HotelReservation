@@ -43,25 +43,25 @@ public class JwtTokenManager {
         }
     }
 
-//    public Optional<String> createToken(String id, ERole role){
-//        String token = null;
-//        Date date = new Date(System.currentTimeMillis()+(1000*60*5));
-//        try {
-//            token = JWT.create()
-//                    .withAudience(audience)
-//                    .withIssuer(issuer)
-//                    .withIssuedAt(new Date())
-//                    .withExpiresAt(date)
-//                    .withClaim("id",id)
-//                    .withClaim("role",role.toString())
-//                    .sign(Algorithm.HMAC512(secretKey));
-//            return Optional.of(token);
-//
-//        } catch (Exception e){
-//            System.out.println(e.getMessage());
-//            return Optional.empty();
-//        }
-//    }
+    public Optional<String> createToken(String id, ERole role){
+        String token = null;
+        Date date = new Date(System.currentTimeMillis()+(1000*60*5));
+        try {
+            token = JWT.create()
+                    .withAudience(audience)
+                    .withIssuer(issuer)
+                    .withIssuedAt(new Date())
+                    .withExpiresAt(date)
+                    .withClaim("id",id)
+                    .withClaim("role",role.toString())
+                    .sign(Algorithm.HMAC512(secretKey));
+            return Optional.of(token);
+
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+            return Optional.empty();
+        }
+    }
 
     public Boolean validateToken(String token){
         try {

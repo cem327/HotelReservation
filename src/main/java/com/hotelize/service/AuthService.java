@@ -5,7 +5,6 @@ import com.hotelize.dto.request.AuthRegisterRequestDto;
 import com.hotelize.dto.request.LoginRequestDto;
 import com.hotelize.dto.response.AuthRegisterResponseDto;
 import com.hotelize.exception.auth_exception.ErrorType;
-import com.hotelize.exception.auth_exception.AuthManagerException;
 import com.hotelize.repository.AuthRepository;
 import com.hotelize.utils.JwtTokenManager;
 import com.hotelize.utils.ServiceManager;

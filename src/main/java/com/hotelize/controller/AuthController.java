@@ -7,6 +7,7 @@ import com.hotelize.dto.response.AuthRegisterResponseDto;
 import com.hotelize.service.AuthService;
 import com.hotelize.utils.JwtTokenManager;
 import com.hotelize.utils.enums.ERole;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.apache.catalina.User;
 import org.springframework.http.ResponseEntity;
