@@ -13,7 +13,5 @@ public interface HotelMapper {
     HotelMapper INSTANCE = Mappers.getMapper(HotelMapper.class);
 
     Hotel fromHotelAddRequestDtoToHotel(final HotelAddRequestDto dto);
-    HotelAddResponseDto HotelToHotelAddResponseDto(final HotelAddResponseDto dto);
-
     HotelAddResponseDto fromHotelToHotelAddResponseDto(final Hotel hotel);
 }

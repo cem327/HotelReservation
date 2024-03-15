@@ -22,10 +22,10 @@ import java.time.LocalDateTime;
 public class Location implements Serializable {
     @Id
     private String id;
-
     private String country;
     private String city;
     private String address;
+    private String hotelId;
 
     @CreatedDate
     private LocalDateTime createdAt;

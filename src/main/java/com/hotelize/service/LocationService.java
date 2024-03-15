@@ -54,4 +54,7 @@ public class LocationService extends ServiceManager<Location, String> {
         return mongoOperations.find(query, Location.class);
     }
 
+    public Location add(Location location) {
+        return locationRepository.save(location);
+    }
 }

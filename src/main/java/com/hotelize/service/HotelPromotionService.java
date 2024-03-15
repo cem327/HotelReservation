@@ -14,4 +14,9 @@ public class HotelPromotionService extends ServiceManager<HotelPromotion, String
         super(hotelPromotionRepository);
         this.hotelPromotionRepository = hotelPromotionRepository;
     }
+
+    public HotelPromotion add(HotelPromotion hotelPromotion) {
+
+        return hotelPromotionRepository.save(hotelPromotion);
+    }
 }

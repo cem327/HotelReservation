@@ -48,4 +48,8 @@ public class TourService extends ServiceManager<Tour, String> {
     public List<String> findAllIdsByFilters(String name, Boolean isActive) {
         return getOnlyIdOfTour(findTourByCriteria(name,isActive));
     }
+
+    public Tour add(Tour tour) {
+        return tourRepository.save(tour);
+    }
 }

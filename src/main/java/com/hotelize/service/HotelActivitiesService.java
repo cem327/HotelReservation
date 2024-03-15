@@ -15,4 +15,9 @@ public class HotelActivitiesService extends ServiceManager<HotelActivities, Stri
         super(hotelActivitiesRepository);
         this.hotelActivitiesRepository = hotelActivitiesRepository;
     }
+
+    public HotelActivities add(HotelActivities hotelActivities) {
+
+        return hotelActivitiesRepository.save(hotelActivities);
+    }
 }

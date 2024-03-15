@@ -1,3 +1,4 @@
+
 server:
   port: 8080
 
@@ -9,6 +10,7 @@ spring:
       username: ${USERNAME}
       password: ${PASSWORD}
       database: hotelizeDB
+
 
 jwt:
   secretKey: ${secretKey}

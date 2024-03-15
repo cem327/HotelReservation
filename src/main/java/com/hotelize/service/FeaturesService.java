@@ -53,4 +53,8 @@ public class FeaturesService extends ServiceManager<Features, String> {
         return featureMongoOperations.find(query, Features.class);
     }
 
+    public Features add(Features features) {
+
+        return featuresRepository.save(features);
+    }
 }

@@ -33,15 +33,10 @@ public class AuthController {
         return ResponseEntity.ok(authService.login(dto));
     }
 
-    @GetMapping("/create-token")
+    @GetMapping(CREATE_TOKEN)
     public ResponseEntity<String> createToken(String id, ERole role){
         return ResponseEntity.ok(tokenManager.createToken(id,role).get());
     }
-
-
-
-
-
 
 
 }

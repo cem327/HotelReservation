@@ -49,4 +49,8 @@ public class TagsService extends ServiceManager<Tags, String> {
     public List<String> findAllIdsByFilters(String name) {
         return getOnlyIdOfTags(findTagsByCriteria(name));
     }
+
+    public Tags add(Tags tags) {
+        return tagsRepository.save(tags);
+    }
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-03-14T01:02:22+0300",
+    date = "2024-03-15T11:41:44+0300",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 21 (Oracle Corporation)"
 )
 @Component
@@ -22,27 +22,16 @@ public class HotelMapperImpl implements HotelMapper {
 
         Hotel.HotelBuilder hotel = Hotel.builder();
 
+        hotel.name( dto.getName() );
+        hotel.location( dto.getLocation() );
+        hotel.longitude( dto.getLongitude() );
+        hotel.latitude( dto.getLatitude() );
+        hotel.totalPoint( dto.getTotalPoint() );
+        hotel.checkInTime( dto.getCheckInTime() );
+        hotel.checkOutTime( dto.getCheckOutTime() );
+        hotel.description( dto.getDescription() );
+
         return hotel.build();
-    }
-
-    @Override
-    public HotelAddResponseDto HotelToHotelAddResponseDto(HotelAddResponseDto dto) {
-        if ( dto == null ) {
-            return null;
-        }
-
-        HotelAddResponseDto.HotelAddResponseDtoBuilder hotelAddResponseDto = HotelAddResponseDto.builder();
-
-        hotelAddResponseDto.name( dto.getName() );
-        hotelAddResponseDto.location( dto.getLocation() );
-        hotelAddResponseDto.longitude( dto.getLongitude() );
-        hotelAddResponseDto.latitude( dto.getLatitude() );
-        hotelAddResponseDto.totalPoint( dto.getTotalPoint() );
-        hotelAddResponseDto.checkInTime( dto.getCheckInTime() );
-        hotelAddResponseDto.checkOutTime( dto.getCheckOutTime() );
-        hotelAddResponseDto.description( dto.getDescription() );
-
-        return hotelAddResponseDto.build();
     }
 
     @Override

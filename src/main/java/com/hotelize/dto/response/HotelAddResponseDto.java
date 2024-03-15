@@ -11,12 +11,12 @@ import lombok.NoArgsConstructor;
 @Builder
 public class HotelAddResponseDto {
 
-    private String name;
-    private String location;
-    private Double longitude;
-    private Double latitude;
-    private Integer totalPoint;
-    private String checkInTime;
-    private String checkOutTime;
-    private String description;
+    String name;
+    String location;
+    Double longitude;
+    Double latitude;
+    Integer totalPoint;
+    String checkInTime;
+    String checkOutTime;
+    String description;
 }

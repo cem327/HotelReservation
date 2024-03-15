@@ -9,6 +9,7 @@ import com.hotelize.exception.auth_exception.AuthManagerException;
 import com.hotelize.repository.AuthRepository;
 import com.hotelize.utils.JwtTokenManager;
 import com.hotelize.utils.ServiceManager;
+import com.hotelize.utils.enums.ERole;
 import com.hotelize.utils.enums.EStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -53,13 +54,11 @@ public class AuthService extends ServiceManager<Auth, String> {
         }
         if(authOptional.get().getStatus().equals(EStatus.ACTIVE)){
             return jwtTokenManager.createToken(authOptional.get().getId(),authOptional.get().getRole())
-                    .orElseThrow(() -> { throw new AuthManagerException(ErrorType.TOKEN_NOT_CREATED);});
+                    .orElseThrow(() -> new AuthManagerException(ErrorType.TOKEN_NOT_CREATED));
         } else {
             throw new AuthManagerException(ErrorType.ACCOUNT_NOT_ACTIVE);
         }
     }
-
-
 
 
 

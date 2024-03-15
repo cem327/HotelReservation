@@ -9,6 +9,7 @@ import com.hotelize.exception.hotel_service_exception.HotelServiceException;
 import com.hotelize.mapper.HotelMapper;
 import com.hotelize.repository.HotelRepository;
 import com.hotelize.utils.ServiceManager;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -17,11 +18,12 @@ import java.util.List;
 import java.util.Set;
 
 @Service
+@Slf4j
 public class HotelService extends ServiceManager<Hotel,String> {
 
     private final HotelRepository hotelRepository;
-    Hotel_TagsService hotelTagsService;
-    Hotel_TourService hotelTourService;
+    private final Hotel_TagsService hotelTagsService;
+    private final Hotel_TourService hotelTourService;
     Hotel_FeaturesService hotelFeaturesService;
     HotelPromotionService hotelPromotionService;
     Hotel_LocationService hotelLocationService;
@@ -31,15 +33,34 @@ public class HotelService extends ServiceManager<Hotel,String> {
     FeaturesService featuresService;
 
 
-    public HotelService(HotelRepository hotelRepository) {
+    public HotelService(HotelRepository hotelRepository,
+                        Hotel_TagsService hotelTagsService,
+                        Hotel_TourService hotelTourService,
+                        Hotel_LocationService hotelLocationService,
+                        Hotel_FeaturesService hotelFeaturesService,
+                        TagsService tagsService,
+                        TourService tourService,
+                        FeaturesService featuresService,
+                        LocationService locationService,
+                        HotelPromotionService hotelPromotionService) {
         super(hotelRepository);
         this.hotelRepository = hotelRepository;
+        this.hotelTagsService = hotelTagsService;
+        this.hotelTourService = hotelTourService;
+        this.hotelLocationService = hotelLocationService;
+        this.hotelFeaturesService = hotelFeaturesService;
+        this.tagsService = tagsService;
+        this.tourService = tourService;
+        this.featuresService = featuresService;
+        this.locationService = locationService;
+        this.hotelPromotionService = hotelPromotionService;
     }
     public List<Hotel> findAll(){
         return hotelRepository.findAll();
     }
 
     public HotelAddResponseDto add(HotelAddRequestDto dto) {
+
         Hotel hotel = HotelMapper.INSTANCE.fromHotelAddRequestDtoToHotel(dto);
         hotelRepository.save(hotel);
 
@@ -50,6 +71,7 @@ public class HotelService extends ServiceManager<Hotel,String> {
         hotelLocationService.save(Hotel_Location.builder().hotelId(hotel.getId()).build());
 
         return HotelMapper.INSTANCE.fromHotelToHotelAddResponseDto(hotel);
+
     }
 
 
@@ -123,6 +145,8 @@ public class HotelService extends ServiceManager<Hotel,String> {
         for (Set<String> hotelIds : hotelIdsList) {
             commonHotelIds.retainAll(hotelIds); //TODO BURADA YAPILACAK SEYLLER VAR.
         }
+
+
 
         // Retrieve hotels based on common IDs
         List<Hotel> commonHotels = new ArrayList<>();

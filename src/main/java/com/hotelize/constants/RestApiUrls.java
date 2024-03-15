@@ -48,6 +48,8 @@ public class RestApiUrls {
     public static final String GET_FILTERED_HOTELS = "/get-filtered-hotels";
 
     public static final String HOTEL_FIND_SEARCH = "/hotel-find-search";
+    public static final String ACTIVATE_ACCOUNT = "/activate-account";
+    public static final String CREATE_TOKEN = "/create-token";
 
 
 
