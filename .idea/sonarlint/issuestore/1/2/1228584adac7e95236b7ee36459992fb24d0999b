@@ -1,8 +1,5 @@
 
-r
-java:S3655&"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¡šçúşÿÿÿÿ8ÔåÎ¾ã1
-Q
-java:S1128
-"5Remove this unused import 'org.apache.catalina.User'.(›ân8ÚåÎ¾ã1
-Q
-java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8ÚåÎ¾ã1
+l
+java:S36552"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¡û‹i8şüæã1
+]
+java:S1128";Remove this unused import 'com.hotelize.utils.enums.ERole'.(ÜÔ•·úÿÿÿÿ8šØÕçã1

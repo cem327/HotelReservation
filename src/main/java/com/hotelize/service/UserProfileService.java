@@ -6,7 +6,7 @@ import com.hotelize.dto.request.AddFavouriteRequestDto;
 import com.hotelize.dto.request.CreateUserRequestDto;
 import com.hotelize.dto.request.UserProfileUpdateRequestDto;
 import com.hotelize.dto.response.CreateUserResponseDto;
-import com.hotelize.exception.auth_exception.AuthManagerException;
+import com.hotelize.exception.auth_exception.AuthServiceException;
 import com.hotelize.exception.hotel_service_exception.HotelServiceException;
 import com.hotelize.exception.user_profile_service_exception.ErrorType;
 import com.hotelize.exception.user_profile_service_exception.UserProfileServiceException;
@@ -40,7 +40,7 @@ public class UserProfileService extends ServiceManager<UserProfile, String> {
     public CreateUserResponseDto createUserProfile(CreateUserRequestDto dto){
 
         authService.findById(dto.getAuthId())
-                .orElseThrow(() -> new AuthManagerException(com.hotelize.exception.auth_exception.ErrorType.AUTH_ID_NOT_FOUND));
+                .orElseThrow(() -> new AuthServiceException(com.hotelize.exception.auth_exception.ErrorType.AUTH_ID_NOT_FOUND));
 
 
         UserProfile userProfile = UserProfileMapper.INSTANCE.fromCreateRequestToUserProfile(dto);

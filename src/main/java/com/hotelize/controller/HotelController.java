@@ -18,7 +18,6 @@ import static com.hotelize.constants.RestApiUrls.HOTEL;
 @RequestMapping(HOTEL)
 @RequiredArgsConstructor
 public class HotelController {
-
     private final HotelService hotelService;
 
     @GetMapping(FIND_ALL)

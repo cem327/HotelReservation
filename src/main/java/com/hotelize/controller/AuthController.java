@@ -1,5 +1,6 @@
 package com.hotelize.controller;
 
+import com.hotelize.domain.Auth;
 import com.hotelize.dto.request.AuthRegisterRequestDto;
 import com.hotelize.dto.request.LoginRequestDto;
 import com.hotelize.dto.response.AuthRegisterResponseDto;
@@ -9,6 +10,7 @@ import com.hotelize.utils.enums.ERole;
 import lombok.RequiredArgsConstructor;
 import org.apache.catalina.User;
 import org.springframework.http.ResponseEntity;
+import com.hotelize.exception.auth_exception.*;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -24,19 +26,33 @@ public class AuthController {
     private final JwtTokenManager tokenManager;
 
 
-    @GetMapping(REGISTER)
+    @PostMapping(REGISTER)
+    @CrossOrigin("*")
     public ResponseEntity<AuthRegisterResponseDto> register(AuthRegisterRequestDto request) {return authService.register(request);
     }
 
     @PostMapping(LOGIN)
-    public ResponseEntity<String> login(@RequestBody LoginRequestDto dto){
-        return ResponseEntity.ok(authService.login(dto));
+    @CrossOrigin("*")
+    public ResponseEntity<String> login(@RequestBody @Valid LoginRequestDto dto){
+        Optional<Auth> auth = authService.login(dto);
+        if (auth.isEmpty())
+            throw new AuthServiceException(ErrorType.ERROR_INVALID_LOGIN_PARAMETER);
+        Optional<String> token = tokenManager.createToken(auth.get().getId());
+        if (token.isEmpty())
+            throw new AuthServiceException(ErrorType.ERROR_CREATE_TOKEN);
+        return ResponseEntity.ok(token.get());
     }
 
     @GetMapping(CREATE_TOKEN)
+    @CrossOrigin("*")
     public ResponseEntity<String> createToken(String id, ERole role){
         return ResponseEntity.ok(tokenManager.createToken(id,role).get());
     }
+
+
+
+
+
 
 
 }

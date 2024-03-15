@@ -9,7 +9,6 @@ import com.hotelize.exception.auth_exception.AuthManagerException;
 import com.hotelize.repository.AuthRepository;
 import com.hotelize.utils.JwtTokenManager;
 import com.hotelize.utils.ServiceManager;
-import com.hotelize.utils.enums.ERole;
 import com.hotelize.utils.enums.EStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -47,18 +46,27 @@ public class AuthService extends ServiceManager<Auth, String> {
     }
 
 
-    public String login(LoginRequestDto dto) {
-        Optional<Auth> authOptional = authRepository.findOptionalByUserNameAndPassword(dto.getUserName(),dto.getPassword());
-        if(authOptional.isEmpty()){
-            throw new AuthManagerException(ErrorType.LOGIN_ERROR);
-        }
-        if(authOptional.get().getStatus().equals(EStatus.ACTIVE)){
-            return jwtTokenManager.createToken(authOptional.get().getId(),authOptional.get().getRole())
-                    .orElseThrow(() -> new AuthManagerException(ErrorType.TOKEN_NOT_CREATED));
-        } else {
-            throw new AuthManagerException(ErrorType.ACCOUNT_NOT_ACTIVE);
-        }
+    public Optional<Auth> login(LoginRequestDto dto){
+        Optional<Auth> auth = authRepository.findOptionalByUserNameAndPassword(dto.getUserName(),dto.getPassword());
+        return auth;
     }
+
+
+
+//    public String login(LoginRequestDto dto) {
+//        Optional<Auth> authOptional = authRepository.findOptionalByUserNameAndPassword(dto.getUserName(),dto.getPassword());
+//        if(authOptional.isEmpty()){
+//            throw new AuthManagerException(ErrorType.LOGIN_ERROR);
+//        }
+//        if(authOptional.get().getStatus().equals(EStatus.ACTIVE)){
+//            return jwtTokenManager.createToken(authOptional.get().getId(),authOptional.get().getRole())
+//                    .orElseThrow(() -> { throw new AuthManagerException(ErrorType.TOKEN_NOT_CREATED);});
+//        } else {
+//            throw new AuthManagerException(ErrorType.ACCOUNT_NOT_ACTIVE);
+//        }
+//    }
+
+
 
 
 

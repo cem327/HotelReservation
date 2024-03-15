@@ -135,14 +135,6 @@ c
 3src/main/java/com/hotelize/service/TourService.java,a\7\a7b75813a18ceaa65c933dc064f15a927f95d92d
 p
 @src/main/java/com/hotelize/repository/UserProfileRepository.java,f\1\f159702212f43554b06c396d818796ede3e6b3c6
-s
-Csrc/main/java/com/hotelize/controller/Hotel_FeaturesController.java,9\d\9d7f5da94fd540d373866c3ab2cd83642aa7e774
-o
-?src/main/java/com/hotelize/controller/Hotel_TagsController.java,d\7\d7dffc47562ffa1bacb89b4bd93d6d469feeffb6
-o
-?src/main/java/com/hotelize/controller/Hotel_TourController.java,c\c\cc6945aef3082091a06ec9c20ebb89cb4a9d24d5
-Å
-Q.idea/sonarlint/securityhotspotstore/c/c/cc6945aef3082091a06ec9c20ebb89cb4a9d24d5,b\c\bc9e86c67d59dfc60017ec0b7bb762743615ece6
 Å
 Q.idea/sonarlint/securityhotspotstore/c/4/c4169baddaffc90b6b6e6fb3e9c91485d84bff34,e\d\ed4e10beb18483b0d82848805d39db85a4879356
 w
@@ -162,8 +154,6 @@ Q.idea/sonarlint/securityhotspotstore/9/4/9474a2ab7bdc19076e938c08fa8dbb3104fd1d
 Å
 Q.idea/sonarlint/securityhotspotstore/6/0/60c9b12296692575b1db7b3098157471f2b4cd7b,e\9\e99539704565509ac09fdf1e2fa8ec6c96109f25
 Å
-Q.idea/sonarlint/securityhotspotstore/9/d/9d7f5da94fd540d373866c3ab2cd83642aa7e774,4\8\4822618cab42ffef004a1579c1d3798d62391a93
-Å
 Q.idea/sonarlint/securityhotspotstore/2/0/208e6b0ef599de821566e35d158e758c06bd813e,9\e\9e3d0b159c54df7be255261d3c317ca5ffb5ea53
 Å
 Q.idea/sonarlint/securityhotspotstore/4/c/4c0eec89cb47967149afb776dc90351e61622c9f,2\2\2272873957e98f26a92c88782d0d5f093f57bdb5
@@ -173,8 +163,6 @@ w
 G.idea/sonarlint/issuestore/e/6/e660e94237b6c18edfc11abb8811900b963bc494,c\2\c2242198e6a9b0c4915e9a022534ed1a808efa93
 Å
 Q.idea/sonarlint/securityhotspotstore/9/b/9b067986a24b0d75ced277b7f741901c5c62f281,4\b\4b3f5d2bbad912a0cdb183b22a892de72d3a8018
-Å
-Q.idea/sonarlint/securityhotspotstore/9/e/9ed5c45b8d5055407af22e9f004610392da3fe25,7\8\78f896439509eb3c7ecbecf2e2d5caf0e859d08e
 Å
 Q.idea/sonarlint/securityhotspotstore/9/2/92098b0492450b3e926ad37f15cad34424105dc8,3\8\38c1659f1bceabf66074c6a6a85ef97f7e3e3d27
 Å
@@ -189,8 +177,6 @@ w
 G.idea/sonarlint/issuestore/7/c/7cd1a947cd53627b7a1e575430b21835f189d667,a\4\a46e1928471606ceccfb7d6700e0845c257ed83e
 Å
 Q.idea/sonarlint/securityhotspotstore/8/3/83bbcf836d03501cac1b350f216374a2805603ac,8\d\8db06ef215b900cae1e8b248ccce5b4825f9404c
-Å
-Q.idea/sonarlint/securityhotspotstore/d/7/d7dffc47562ffa1bacb89b4bd93d6d469feeffb6,5\9\598162a9c2fa8773903aa4217a59987d5daf3fcc
 w
 G.idea/sonarlint/issuestore/e/2/e2b0a5d15913dfbad973e4ee142f8b0cf4b0a9b0,3\9\397d0198d65672c4e7b1c06cfb87bd6b036afce3
 w
@@ -246,8 +232,6 @@ Q.idea/sonarlint/securityhotspotstore/6/1/6135ca7e7716eedb3a3dd2d67e8106ec0c2e0d
 w
 G.idea/sonarlint/issuestore/b/d/bd1e27cde6e1e519d91de8523d411e980083dccd,b\1\b1ad0dc4426a4293f4213d2d68b66127d9aa1b0b
 w
-G.idea/sonarlint/issuestore/b/5/b522f914c831216f3cca39255489cfd46ae31e31,f\b\fbd25582ea846854a9b34830326e0af3b8cb8e61
-w
 G.idea/sonarlint/issuestore/b/3/b365e340ad7978ae60dd75825518c2b1e1f26e49,c\e\ce8668cfaba68728a0307e716555903abcbdb292
 Å
 Q.idea/sonarlint/securityhotspotstore/c/1/c1ffe3c1dc6301da006c26e9efdaddba76c1ed52,e\4\e456d5490b11b246c7e74b7fd52a3c116729aa41
@@ -269,8 +253,6 @@ Q.idea/sonarlint/securityhotspotstore/6/f/6ffe7985e98975f1124e566452e6bd6cf1ed5e
 Q.idea/sonarlint/securityhotspotstore/f/1/f15dd7345c9806bfc1046f671763714da5c280f4,2\7\270e5e0ccfdd9d96eee38fe378a00beecf14048c
 Å
 Q.idea/sonarlint/securityhotspotstore/c/3/c39fde16bdfbfe45300359d87d5a04db80ce69c6,b\4\b49be46c57e9f267fcbe1f3ef58307020aeb2c91
-Å
-Q.idea/sonarlint/securityhotspotstore/d/9/d9081d22246253dad769d91e92c9a6a95443732c,7\2\72e64927d1328ad5a7066ae3d82d568ac36e73a9
 Å
 Q.idea/sonarlint/securityhotspotstore/f/4/f450fbfed1d075402d493553ca3e20009053d778,e\9\e90023e3bc9e5b420e195192ce95d1acb9203c98
 Å
@@ -321,16 +303,12 @@ w
 G.idea/sonarlint/issuestore/9/4/9474a2ab7bdc19076e938c08fa8dbb3104fd1dd0,c\f\cff2eab5d862a9a9f34b6bee7d9bca1b07f734ba
 Å
 Q.idea/sonarlint/securityhotspotstore/b/f/bfb9453d49af9bc40f5f7a5f034be3c7ef8fa6bf,8\d\8dc69977b195b3e539afee356a63636ebc763980
-w
-G.idea/sonarlint/issuestore/d/9/d9081d22246253dad769d91e92c9a6a95443732c,6\8\68486bca967679c148b1697797d98f6fa94cb9a5
 Å
 Q.idea/sonarlint/securityhotspotstore/c/0/c0d334d7f1a75d04aac6bb42e561b30fc2e1ef01,3\6\365183fe5c8b32a77d24c655e56852f56110db07
 w
 G.idea/sonarlint/issuestore/d/d/dd7b3350c29c49497756c7f32c69a3bed18b1cba,9\d\9db44714da783e82392884aeea0d83f0125570ed
 Å
 Q.idea/sonarlint/securityhotspotstore/5/c/5c8ffdfe4856b4e0faab133e3ea42183700d172a,9\a\9a83994657275e55f8a9f03b20f2b417115e3b85
-Å
-Q.idea/sonarlint/securityhotspotstore/b/5/b522f914c831216f3cca39255489cfd46ae31e31,1\1\111fb75916c47713075c6b394f7f4f102247ebd6
 Å
 Q.idea/sonarlint/securityhotspotstore/b/3/b365e340ad7978ae60dd75825518c2b1e1f26e49,a\0\a034a04b32b991b133a83444371a46121697c2f4
 w
@@ -656,12 +634,6 @@ a
 1src/main/java/com/hotelize/utils/enums/ERole.java,7\a\7aad841bb582a46a03bf41337961c9e077586b5f
 e
 5src/main/java/com/hotelize/utils/JwtTokenManager.java,e\6\e69ba396066ebdaab841df2f02be3c4f6bd7c218
-}
-Msrc/main/java/com/hotelize/exception/Auth_Exception/AuthManagerException.java,e\6\e66ede61e643ba7841e1eac3219d1900783b78b0
-}
-Msrc/main/java/com/hotelize/exception/Auth_exception/AuthManagerException.java,e\4\e478fb17d73df383eb327f61e28ded96a965f233
-}
-Msrc/main/java/com/hotelize/exception/auth_exception/AuthManagerException.java,4\f\4f79d2d3dcef9d4ebd1f3e15b232723fb34b6dbe
 É
 Ssrc/main/java/com/hotelize/exception/auth_exception/AuthGlobalExceptionHandler.java,5\0\50a9f49c6aadcf1e0bb6b914175e3e1d5bacdd41
 á
@@ -676,10 +648,6 @@ Esrc/main/java/com/hotelize/exception/auth_exception/ErrorMessage.java,2\0\2027
 0src/main/java/com/hotelize/utils/SampleData.java,2\3\23ee2c71e8e0d66d84ffed2caa777f415a658701
 d
 4src/main/java/com/hotelize/utils/ServiceManager.java,5\4\54e6fac297574495ea7fbd2222fc5cc59491c64e
-c
-3src/main/java/com/hotelize/manager/UserManager.java,7\5\757a73c7659ce4cc9f63cbae1f140ac42307118c
-w
-Gsrc/main/java/com/hotelize/dto/request/UpdateUserProfileRequestDto.java,4\6\467f05ece47746981480ec9c1d56be773c7d024f
 B
 et --hard HEAD@{3},2\b\2bd070bbb88771fa8221b21600c1625e708bce0b
 b
@@ -704,3 +672,13 @@ w
 Gsrc/main/java/com/hotelize/dto/request/UserProfileUpdateRequestDto.java,d\d\dd84ab0af08219e86d2584a564ecd02bd9bf5834
 p
 @src/main/java/com/hotelize/dto/response/HotelAddResponseDto.java,c\b\cb302981faeb6a995460a7eb88a1b3dc1feeb564
+:
+
+DockerFile,4\0\40f7331d8e28c3c74df3da70560f362ea1796985
+:
+
+Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
+}
+Msrc/main/java/com/hotelize/exception/auth_exception/AuthServiceException.java,8\8\88ce9f945bbd482a3ed2e9ba98b89980252dd9e8
+|
+Lsrc/main/java/com/hotelize/dto/request/HotelGetFilteredHotelsRequestDto.java,e\9\e95a059e0bfcc6b63454a2b9d3dfaae528b6fb16
